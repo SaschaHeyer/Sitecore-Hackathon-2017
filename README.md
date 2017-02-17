@@ -1,1 +1,1 @@
-# Sitecore-Hackthon-2017
+# Sitecore-Hackathon-2017
