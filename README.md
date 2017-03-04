@@ -162,7 +162,7 @@ If you like you can add splitter and other moduls together with the form in this
 * You have change the following fields (Opening, Closing, Field Format)
 
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor3.png?token=AB5j8GA2EzWr0PknPwwPg0jQ9VEPwAf0ks5YxDJKwA%3D%3D)]()
-[![]()]()
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor10.png?token=AB5j8LTvXcwqccnPJIceYznB2qY_bmfJks5YxDt4wA%3D%3D)]()
 
 
 ## Extensibility
