@@ -7,6 +7,7 @@ using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Paramaters.Imp;
 using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Paramaters.Imp.Sub;
 using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Paramaters.Sub;
 using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Results;
+using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Results.Imp;
 using Sitecore.XA.Foundation.Mvc.Controllers;
 using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Services;
 using Newtonsoft.Json;
@@ -50,29 +51,32 @@ namespace Hackathon.Sitecore.Triumvirate.Feature.Form.Controllers.Container
         /// </summary>
         /// <param name="parameter">parameters as json</param>
         /// <param name="id">id of the datasource item</param>
-        /// <param name="contextSiteId">id of the context site</param>
+        /// <param name="contextSite">id of the context site</param>
         [HttpPost]
-        public void Submit(string parameter, string id, string contextSiteId)
+        public void Submit(string parameter, string id, string contextSite)
         {
             Item datasourceItem = this.ContentRepository.GetItem(new ID(id));
-            string subject = datasourceItem[Templates.Form.Fields.Subject];
-            string to = datasourceItem[Templates.Form.Fields.To];
+            Item conetxtSiteItem = this.ContentRepository.GetItem(new ID(contextSite));
+           
+            IResult result = new Result();
 
-            IMailInformationParameter mailInformation = new MailInformationParameter()
+            if (datasourceItem != null && conetxtSiteItem != null)
             {
-                Subject = subject,
-                Receiver = to
-            };
+                using (new ContextItemSwitcher(conetxtSiteItem))
+                {
+                    result = this.FormSendService.Execute(new FormParameter()
+                    {
+                        FormElements = FormContainerController.MapInputToParameter(parameter),
+                        MailInformation = new MailInformationParameter()
+                        {
+                            Subject = datasourceItem[Templates.Form.Fields.Subject],
+                            Receiver = datasourceItem[Templates.Form.Fields.To]
+                        }
+                    });
+                }
+            }
 
-            IEnumerable<IFormElementParameter> formElements = MapInputToParameter(parameter);
-
-            IResult result = this.FormSendService.Execute(new FormParameter()
-            {
-                FormElements = formElements,
-                MailInformation = mailInformation
-            });
-
-            bool isSuccessful = result.Successful;
+            bool isSuccessful = result.Successful; //// TODO: for future use: feedabck?
         }
 
         /// <summary>

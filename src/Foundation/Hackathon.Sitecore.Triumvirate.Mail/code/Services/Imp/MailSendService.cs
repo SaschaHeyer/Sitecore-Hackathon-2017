@@ -1,4 +1,5 @@
-﻿using System.Net.Mail;
+﻿using System;
+using System.Net.Mail;
 using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Models;
 using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Paramaters;
 using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Paramaters.Imp;
@@ -7,6 +8,11 @@ using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Paramaters.Sub;
 using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Repositories;
 using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Results;
 using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Results.Imp;
+using Sitecore.Data.Items;
+using Sitecore.Sites;
+using Sitecore.Web;
+using Sitecore.XA.Foundation.Multisite;
+using ScFactory = Sitecore.Configuration.Factory;
 
 namespace Hackathon.Sitecore.Triumvirate.Foundation.Mail.Services.Imp
 {
@@ -31,10 +37,15 @@ namespace Hackathon.Sitecore.Triumvirate.Foundation.Mail.Services.Imp
 
             try
             {
+                IMailSettingsParameter mailSettings;
+
+                mailSettings = parameter.MailSettings ?? this.DefaultMailSettings;
+                
+
                 IMailParameter mailParameter = new MailParameter()
                 {
                     MailInformation = parameter.MailInformation,
-                    MailSettings = parameter.MailSettings ?? this.DefaultMailSettings,
+                    MailSettings = mailSettings,
                     Body = parameter.Body
                 };
 
@@ -43,7 +54,7 @@ namespace Hackathon.Sitecore.Triumvirate.Foundation.Mail.Services.Imp
                     mailParameter.MailSettings.CreateSmtpClient().Send(mailParameter.CreateMailMessage());
                 }
             }
-            catch
+            catch (Exception e)
             {
                 successful = false;
             }

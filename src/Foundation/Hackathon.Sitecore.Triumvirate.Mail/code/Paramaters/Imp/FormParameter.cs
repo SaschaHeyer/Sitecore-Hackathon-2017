@@ -19,8 +19,7 @@ namespace Hackathon.Sitecore.Triumvirate.Foundation.Mail.Paramaters.Imp
             {
                 MailSettings = this.MailSettings,
                 MailInformation = this.MailInformation,
-                Body =
-                    this.FormElements.Aggregate(new StringBuilder(), (b, e) => b.AppendLine(string.Format("{0}: {1}", e.Label, e.Value))).ToString()
+                Body = this.FormElements.Aggregate(new StringBuilder(), (b, e) => b.AppendLine(string.Format("{0}: {1}", e.Label, e.Value))).ToString()
             };
         }
     }

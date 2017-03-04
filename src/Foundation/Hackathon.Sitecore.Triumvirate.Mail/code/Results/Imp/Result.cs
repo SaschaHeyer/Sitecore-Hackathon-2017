@@ -8,6 +8,11 @@
     /// </author>
     public class Result : IResult
     {
+        public Result()
+        {
+            this.Successful = false;
+        }
+
         public bool Successful { get; set; }
     }
 }
