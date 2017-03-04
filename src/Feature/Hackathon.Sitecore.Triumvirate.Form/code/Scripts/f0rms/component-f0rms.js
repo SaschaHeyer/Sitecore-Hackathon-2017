@@ -5,35 +5,55 @@ XA.component.f0rms = (function ($, document) {
         jQuery(".datepicker").datepicker();
 
         $(".submitButton").click(function (event) {
+            // Prevent a postback
             event.preventDefault();
+
+            // Inititally set validation error to false
+            var validationError = false;
 
             var list = {};
             var formContainer = $(this).closest('.form');
-            formContainer.find("input").each(function () {
-                var label = $(this).prev("label").text();
+            // TODO Textarea
+            formContainer.find("input, textarea").each(function () {
+                // Label Extraction
+                var label = $(this).prev().find("label").text();
                 if (label === "") {
                     return;
                 }
 
+                // Value Extraction
                 var value;
-
-                if ($(this).attr("type") === "submit") {
-                    return;
-                }
                 if ($(this).attr("type") === "checkbox") {
-                    if ($(this).checked) {
-                        value = 1;
-                    }
-                    else {
-                        value = 0;
-                    }
+                    value = $(this).prop("checked");
+                }
+                else if ($(this).attr("type") === "submit") {
+                    return;
                 }
                 else {
                     value = $(this).val();
                 }
 
+                // Validation
+                if ($(this).prop('required') === true && (value === "" || value === false)) {
+                    validationError = true;
+                    // Set Styling
+                    $(this).addClass("errorActive");
+                    $(this).next().css("display", "block")
+                } else {
+                    // Set Styling
+                    $(this).removeClass("errorActive");
+                    $(this).next().css("display", "none")
+                }
+
+                // Set up of json string
                 list[label] = value;
             });
+
+            // Return and dont execute if a error happended
+            if (validationError) {
+                return;
+            }
+
             var parameter = JSON.stringify(list);
             var id = $("#Id").val();
             var contextSiteId = $("#ContextSite").val();
@@ -48,7 +68,6 @@ XA.component.f0rms = (function ($, document) {
                 },
                 method: "POST"
             }).done(function (data) {
-                alert("Call Completed");
             });
         });
     };
