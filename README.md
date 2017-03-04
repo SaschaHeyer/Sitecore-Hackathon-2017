@@ -45,6 +45,7 @@
 ## Usage
 
 > All Components can be saved in the data folder as well as page data
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/associatedContent.png?token=AB5j8IUAP56BqcNAR_0cGBbgqvZJphsSks5Yw_rOwA%3D%3D)]('associatedContent')
 
 
 ### 1. Open the Experience Editor
