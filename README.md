@@ -74,27 +74,33 @@ Your are able to set the mail-subject and mail-receiver via experience button on
 
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/featureSelection.png?token=AB5j8MatUX41x2xW3rM7P1q_hvNTTqVSks5Yw_sVwA%3D%3D)]('featureSelection')
 
-### 4. Switch to the Theme Tab 
+
+### 4. IMPORTANT STEP: disable the default Form Feature
+> we need to disable the default sxa **Form** Feature
+
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/disableForm.png?token=AB5j8DZ-Orz6-S5XYNkLMO040IX5EoXeks5YxGDgwA%3D%3D)]('featureSelection')
+
+### 5. Switch to the Theme Tab 
 * enable the *Create new theme* checkbox
-* choose a name of your choice
+* as theme name name add Hackathon
 * click ok and create the Page
 
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/createTheme.png?token=AB5j8I_pdvtSfVTrHzwTbWenkh4sEWRMks5YxCi_wA%3D%3D)]('mailConfiguration')
 
 
-### 5. Set the Mailserver Settings proper
+### 6. Set the Mailserver Settings proper
 * Go to the Settings Item and create a new **Mail Configuration** above the Mail Setting
 * Set the Mail Configuration (Server, From, Username, Password, Port, SSL)
 
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/mailConfiguration.png?token=AB5j8LqRwU99_E8WtQaBAHL1cWEj-rFPks5Yw_s2wA%3D%3D)]('mailConfiguration')
 
-### Install the included required Theme
+### 7. Install the included required Theme
 
-> This Theme includes some javascript which is required for the form handling
+> **This Theme includes some javascript which is required for the form handling**
 
 * 
 
-### 6. Done
+### 8. Done
 
 
 ## Usage
@@ -195,6 +201,9 @@ If you like you can add splitter and other moduls together with the form in this
 #### Settings
 * /sitecore/system/Settings/Feature/Experience Accelerator/Hackathon
 * /sitecore/system/Settings/Foundation/Experience Accelerator/Mail
+
+#### Branches
+* /sitecore/templates/Branches/Feature/Experience Accelerator/Hackathon
 
 #### Custom Experience Buttons (**CORE** Database)
 * /sitecore/content/Applications/WebEdit/Custom Experience Buttons/Edit Form
