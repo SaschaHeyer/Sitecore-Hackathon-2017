@@ -68,7 +68,6 @@ XA.component.f0rms = (function ($, document) {
                 },
                 method: "POST"
             }).done(function (data) {
-                alert("Call Completed");
             });
         });
     };

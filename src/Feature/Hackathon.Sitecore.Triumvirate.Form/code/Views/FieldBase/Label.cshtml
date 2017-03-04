@@ -8,6 +8,6 @@
 <label for="@Model.Item.ID">
     @Html.Sxa().Field("Label", Model.Item, Model.GetRenderingWebEditingParams())
 </label>
-@(mandatory ? Html.Raw("*") : Html.Raw(string.Empty))
+<b> @(mandatory ? Html.Raw("*") : Html.Raw(string.Empty)) </b>
 
 
