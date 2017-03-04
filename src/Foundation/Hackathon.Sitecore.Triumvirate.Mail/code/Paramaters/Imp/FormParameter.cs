@@ -13,13 +13,22 @@ namespace Hackathon.Sitecore.Triumvirate.Foundation.Mail.Paramaters.Imp
     public class FormParameter : Base.MailParameter, IFormParameter
     {
         public IEnumerable<IFormElementParameter> FormElements { get; set; }
+
+        public IFormFormatParameter FormFormatParameter { get; set; }
+
         public IMailParameter ToMailParameter()
         {
+            StringBuilder stringBuilder = new StringBuilder();
+
+            stringBuilder.AppendLine(this.FormFormatParameter.Opening);
+            this.FormElements.Aggregate(stringBuilder, (b, e) => b.AppendLine(string.Format(this.FormFormatParameter.Field, e.Label, e.Value)));
+            stringBuilder.AppendLine(this.FormFormatParameter.Closing);
+
             return new MailParameter()
             {
                 MailSettings = this.MailSettings,
                 MailInformation = this.MailInformation,
-                Body = this.FormElements.Aggregate(new StringBuilder(), (b, e) => b.AppendLine(string.Format("{0}: {1}", e.Label, e.Value))).ToString()
+                Body = stringBuilder.ToString()
             };
         }
     }

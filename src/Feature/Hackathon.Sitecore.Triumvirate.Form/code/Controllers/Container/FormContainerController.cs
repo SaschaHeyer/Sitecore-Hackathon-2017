@@ -71,7 +71,11 @@ namespace Hackathon.Sitecore.Triumvirate.Feature.Form.Controllers.Container
                         {
                             Subject = datasourceItem[Templates.Form.Fields.Subject],
                             Receiver = datasourceItem[Templates.Form.Fields.To]
-                        }
+                        },
+                        FormFormatParameter = new FormFormatParameter(
+                            datasourceItem[Templates.Form.Fields.Opening],
+                            datasourceItem[Templates.Form.Fields.Closing],
+                            datasourceItem[Templates.Form.Fields.FieldFormat])
                     });
                 }
             }
