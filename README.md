@@ -81,26 +81,39 @@ Your are able to set the mail-subject and mail-receiver via experience button on
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/disableForm.png?token=AB5j8DZ-Orz6-S5XYNkLMO040IX5EoXeks5YxGDgwA%3D%3D)]('featureSelection')
 
 ### 5. Switch to the Theme Tab 
-* enable the *Create new theme* checkbox
-* as theme name name add Hackathon
-* click ok and create the Page
+* **dont** check the *create enw theme checkbox*
+* select the existing Hackathon Theme
 
-[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/createTheme.png?token=AB5j8I_pdvtSfVTrHzwTbWenkh4sEWRMks5YxCi_wA%3D%3D)]('mailConfiguration')
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/theme.png?token=AB5j8M_QjhLZ6JXA69pEgAfenWRl_k7hks5YxGP7wA%3D%3D)]('mailConfiguration')
+
+### 6. Enable the Theme
+
+> The Theme includes important javascript for the form, this is a important step.
+
+* Open the Experience Editor
+* In the Ribbon open the Tab Experience Accelerator
+* Click on the button Theme
+* selecht the Hackathon Theme and click ok
+* save
+* Theme setup done
+
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/Theme1.png?token=AB5j8PdlXkmOaHGZIyG-Kx6LNC0_0CaHks5YxGtbwA%3D%3D)]('mailConfiguration')
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/Theme2.png?token=AB5j8A2Gs7JMYWIHkV7T1DEmWjEr1drYks5YxGtcwA%3D%3D)]('mailConfiguration')
 
 
-### 6. Set the Mailserver Settings proper
+### 7. Set the Mailserver Settings proper
 * Go to the Settings Item and create a new **Mail Configuration** above the Mail Setting
 * Set the Mail Configuration (Server, From, Username, Password, Port, SSL)
 
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/mailConfiguration.png?token=AB5j8LqRwU99_E8WtQaBAHL1cWEj-rFPks5Yw_s2wA%3D%3D)]('mailConfiguration')
 
-### 7. Install the included required Theme
+### 8. Set the default mail settings
+* It is possible to add multiple mail setting items, but you have to define one default setting which is used
+* Click on **Mail** and select the your previous created mail setting item
 
-> **This Theme includes some javascript which is required for the form handling**
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/selecht%20default%20mail.png?token=AB5j8BhGklXXTiZGIknmmuJLTa7w3QWKks5YxGffwA%3D%3D)]('mailConfiguration')
 
-* 
-
-### 8. Done
+### 9. Done
 
 
 ## Usage
