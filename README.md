@@ -201,14 +201,16 @@ If you like you can add splitter and other moduls together with the form in this
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor10.png?token=AB5j8LTvXcwqccnPJIceYznB2qY_bmfJks5YxDt4wA%3D%3D)]()
 
 ### 9. Success and Fail Message
+
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/success.png?token=AB5j8M8LzYbSNZohaK1gA9hc1bA5p4pKks5YxHXGwA%3D%3D)]()
+
+
 * The form provides the option to edit success and error messages
 * Select the **FormContainer** and click on the **Edit component form Item** Custom Experience button
 * you can edit both message´s with a default RTE Field
 
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor3.png?token=AB5j8GA2EzWr0PknPwwPg0jQ9VEPwAf0ks5YxDJKwA%3D%3D)]()
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/success%20error.png?token=AB5j8CkElG4tBXwjCUuGEi8VLdQjv0Efks5YxHWBwA%3D%3D)]()
-[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/success.png?token=AB5j8M8LzYbSNZohaK1gA9hc1bA5p4pKks5YxHXGwA%3D%3D)]()
-
 
 ## Extensibility and Developer Informations
 
