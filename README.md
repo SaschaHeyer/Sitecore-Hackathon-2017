@@ -22,12 +22,18 @@
 ### 2. Create a new Site with the two Main Features
 * Forms (Hackathon)
 * Mail (Hackathon)
+### 3. Set the Mailserver Settings proper
+* Go to the Settings Item and create a new **Mail Configuration** above the Mail Setting
+* Set the Mail Configuration (Server, From, Username, Password, Port, SSL)
+
+### 4. Installation and Configuration Done
+
 
 ## Usage
 
 ### 1. Open the Experience Editor
 
-## API
+## Extensibility
 
 ## Team
 
