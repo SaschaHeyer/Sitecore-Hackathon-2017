@@ -9,8 +9,10 @@
 
 <div @Html.Sxa().Component("checkbox-input")>
     <div class="component-content">
-        @Html.Partial("~/Views/FieldBase/Label.cshtml", Model)
-        <input id="@Model.Item.ID" type="checkbox" @(mandatory ? Html.Raw("required") : Html.Raw(string.Empty))/>
+        <div style="display: inline;">
+            @Html.Partial("~/Views/FieldBase/Label.cshtml", Model)
+        </div>
+        <input id="@Model.Item.ID" type="checkbox" @(mandatory ? Html.Raw("required") : Html.Raw(string.Empty)) />
         @Html.Partial("~/Views/FieldBase/Error.cshtml", Model)
     </div>
 </div>

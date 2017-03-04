@@ -9,7 +9,10 @@
 
 <div @Html.Sxa().Component("date-input")>
     <div class="component-content">
-        @Html.Partial("~/Views/FieldBase/Label.cshtml", Model)
+        <div>
+            @Html.Partial("~/Views/FieldBase/Label.cshtml", Model)
+        </div>
+        
         <input type="text" class="datepicker" @(mandatory ? Html.Raw("required") : Html.Raw(string.Empty))>
         @Html.Partial("~/Views/FieldBase/Error.cshtml", Model)
     </div>
