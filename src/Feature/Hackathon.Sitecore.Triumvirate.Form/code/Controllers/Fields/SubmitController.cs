@@ -1,22 +1,21 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
 using Hackathon.Sitecore.Triumvirate.Feature.Form.Controllers.Fields.Base;
 using Sitecore.XA.Foundation.Mvc.Repositories.Base;
 using Sitecore.XA.Foundation.RenderingVariants.Repositories;
 
 namespace Hackathon.Sitecore.Triumvirate.Feature.Form.Controllers.Fields
 {
-    /// <summary>
-    /// Text Input Controller
-    /// </summary>
-    /// <author>
-    /// Christian Hahn, Mrz-2017
-    /// </author>
-    public class TextInputController : FieldBaseController
+    public class SubmitController : FieldBaseController
     {
         /// <summary>
         /// c'tor
         /// </summary>
-        public TextInputController(IVariantsRepository variantsRepository) : base(variantsRepository)
+        /// <param name="variantsRepository">Reference to Model Repository</param>
+        public SubmitController(IVariantsRepository variantsRepository) : base(variantsRepository)
         {
         }
     }
