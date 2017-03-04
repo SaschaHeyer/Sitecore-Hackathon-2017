@@ -1,4 +1,4 @@
-﻿# Sitecore Experience Accelerator Drag-and-drop Form Editor | Build with ❤
+﻿# Sitecore Experience Accelerator Drag-and-drop Form Composer | Build with ❤
 
 * **Module Purpose:** Build a better user experience for editors building forms with Sitecore and Sitecore Experience Accelerator
 * **Module Sitecore Hackathon Category:** Sitecore Experience Accelerator
@@ -58,8 +58,6 @@ Your are able to set the mail-subject and mail-receiver via experience button on
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/installtion1.png?token=AB5j8AcKx7e-ZtTdCCfizFFupXd1lZrsks5YxE0PwA%3D%3D)]('mailConfiguration')
 
 * Wait until the installation is done.
-
-
 
 
 ### 2. Create a Tenant
@@ -196,9 +194,6 @@ If you like you can add splitter and other moduls together with the form in this
 
 ## Extensibility and Developer Informations
 
-### Why are some Items called **F0rms** ?
-
-
 ### Item Structure
 
 #### Placeholders
@@ -223,7 +218,7 @@ If you like you can add splitter and other moduls together with the form in this
 
 ## Knowing Issues
 ### Duplicated Field Labels cause Issues
-* In this version of this feature please prevent duplicated field labels with the same name.
+* In this version of this feature please prevent duplicated field labels with the same name. 
 
 ## Team
 
