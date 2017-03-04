@@ -100,7 +100,7 @@ Your are able to set the email-subject and email-receiver via experience button 
 * choose a data source of your choice
 
 > This component builds the wrapper around our complete form and capsulate the components together. 
-If you like you can add of course splitter and other moduls togehter with the form in this container
+If you like you can add splitter and other moduls together with the form in this container, this enables you to build very dynamic and flexibel forms.
 
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor2.png?token=AB5j8ItmIlXdRlGLlCK2YidvCnVl-I9Nks5YxDJCwA%3D%3D)]()
 
@@ -116,7 +116,7 @@ If you like you can add of course splitter and other moduls togehter with the fo
 
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor4.png?token=AB5j8Nzz8xzUOT8ALrvgeNalC8pZJ_sRks5YxDJSwA%3D%3D)]()
 
-### 5. Add the componentes of which you need for your form you can choose between differnt form components
+### 5. Add the componentes of which you need for your form you can choose between different form components
 * Checkbox
 * Date
 * Textarea
