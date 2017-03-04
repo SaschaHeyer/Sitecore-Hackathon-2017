@@ -92,6 +92,7 @@ Your are able to set the mail-subject and mail-receiver via experience button on
 
 * Add a new page unter your home root item
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/page.png?token=AB5j8FJo0PCVDjSVpfOtGf4Qsyiej8gvks5YxG86wA%3D%3D)]('mailConfiguration')
+
 * Open this page in the Experience Editor
 * In the Ribbon open the Tab Experience Accelerator
 * Click on the button Theme
