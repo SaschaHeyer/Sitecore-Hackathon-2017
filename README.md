@@ -52,6 +52,15 @@ Your are able to set the mail-subject and mail-receiver via experience button on
 ## Installation
 
 ### 1. Install the Sitecore package
+* Upload the package and click next
+* During the installation you the following message **/sitecore/content/Applications/WebEdit/Custom Experience Buttons/Edit Form**. Choose **Side-by-Side** as option, click apply.
+(*see screen*)
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/installtion1.png?token=AB5j8AcKx7e-ZtTdCCfizFFupXd1lZrsks5YxE0PwA%3D%3D)]('mailConfiguration')
+
+* Wait until the installation is done.
+
+
+
 
 ### 2. Create a Tenant
 * Bevor you can create a Site you need to create a Tentant of your choice
@@ -166,7 +175,10 @@ If you like you can add splitter and other moduls together with the form in this
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor10.png?token=AB5j8LTvXcwqccnPJIceYznB2qY_bmfJks5YxDt4wA%3D%3D)]()
 
 
-## Extensibility
+## Extensibility and Developer Informations
+
+### Why are some Items called **F0rms** ?
+
 
 ### Item Structure
 
@@ -186,6 +198,10 @@ If you like you can add splitter and other moduls together with the form in this
 
 #### Custom Experience Buttons (**CORE** Database)
 * /sitecore/content/Applications/WebEdit/Custom Experience Buttons/Edit Form
+
+## Knowing Issues
+### Duplicated Field Labels cause Issues
+* In this version of this feature please prevent duplicated field labels with the same name.
 
 ## Team
 
