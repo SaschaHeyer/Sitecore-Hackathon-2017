@@ -89,6 +89,38 @@ Your are able to set the email-subject and email-receiver via experience button 
 
 
 ### 1. Open the Experience Editor
+* locate and expand the Hackathon Section
+* this section include alle available componentes
+
+### 2. Start with the first component
+* add the component **FormContainer** in a placeholder of your choice
+* choose a data source of your choice
+> This component builds the wrapper around our complete form and capsulate the components together. 
+If you like you can add of course splitter and other moduls togehter with the form in this container
+
+### 3. Edit the Form Container
+* after your **FormContainer** is placed click on the **Edit component form Item** Custom Experience button
+
+### 4. Set the mail information
+* on each for you are able to set different mail informations
+* **Subject** of the mail 
+* **To** the mail adress which receive the form data if the form is submitted
+
+### 5. Add the componentes of which you need for your form you can choose between differnt form components
+* Checkbox
+* Date
+* Textarea
+* Text
+* Submit Button
+
+> add this components by simply drag & drop the into the **FormContainer**
+
+### 6. Mandatory Fields
+* The Fields are support mandatory validation with mandatory Message
+* This option is aviable via Rendering Paramters
+* Click on one of your Input Components and select **Edit component properties**
+* By enable the checkbox **Mandatory** the mandatory validation is enabled
+* The **Mandatory Error Message** is predefined, you can change it if you want
 
 ## Extensibility
 
