@@ -13,6 +13,8 @@ namespace Hackathon.Sitecore.Triumvirate.Foundation.Mail.Paramaters
     {
         IEnumerable<IFormElementParameter> FormElements { get; }
 
+        IFormFormatParameter FormFormatParameter { get; }
+
         IMailParameter ToMailParameter();
     }
 }

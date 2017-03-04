@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net.Mail;
 using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Paramaters.Sub;
 namespace Hackathon.Sitecore.Triumvirate.Foundation.Mail.Paramaters.Imp
@@ -15,13 +17,35 @@ namespace Hackathon.Sitecore.Triumvirate.Foundation.Mail.Paramaters.Imp
 
         public MailMessage CreateMailMessage()
         {
+            MailMessage mailMessage = new MailMessage()
+            {
+                From = MailParameter.ToMailAddress(this.MailSettings.SenderMail),
+                Subject = this.MailInformation.Subject,
+                Body = this.Body,
+                IsBodyHtml = true
+            };
+
+            IEnumerable<MailAddress> toMailAddresses = this.MailInformation.Receiver.Split(Labels.Delimiter).Select(MailParameter.ToMailAddress).Where(m => m != null);
+
+            foreach (MailAddress toMailAddress in toMailAddresses)
+            {
+                mailMessage.To.Add(toMailAddress);
+            }
+
+            return mailMessage;
+
+        }
+
+        protected static class Labels
+        {
+            public const char Delimiter = '|';
+        }
+
+        protected static MailAddress ToMailAddress(string address)
+        {
             try
             {
-                return new MailMessage(
-                    this.MailSettings.SenderMail,
-                    this.MailInformation.Receiver,
-                    this.MailInformation.Subject,
-                    this.Body);
+                return new MailAddress(address);
             }
             catch (Exception e)
             {
