@@ -21,7 +21,7 @@
 * Styles for each component can set via Rendering Parameters
 * Scaffolding is predefined 
 * Data Folder and Page Data Support
-* Multiple receiver mail adresses **TODO**
+* Multiple receiver mail adresses
 
 ### Components
 
@@ -84,11 +84,70 @@ Your are able to set the email-subject and email-receiver via experience button 
 
 ## Usage
 
-> All Components can be saved in the data folder as well as page data
+> **Tip:** All Components can be saved in the data folder as well as page data
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/associatedContent.png?token=AB5j8IUAP56BqcNAR_0cGBbgqvZJphsSks5Yw_rOwA%3D%3D)]('associatedContent')
 
 
 ### 1. Open the Experience Editor
+* locate and expand the Hackathon Section
+* this section include alle available componentes
+
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor1.png?token=AB5j8JfQg2OrPZ1kdmpTyMaL7RvOkvsoks5YxDHjwA%3D%3D)]()
+
+
+### 2. Start with the first component
+* add the component **FormContainer** in a placeholder of your choice
+* choose a data source of your choice
+
+> This component builds the wrapper around our complete form and capsulate the components together. 
+If you like you can add splitter and other moduls together with the form in this container, this enables you to build very dynamic and flexibel forms.
+
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor2.png?token=AB5j8ItmIlXdRlGLlCK2YidvCnVl-I9Nks5YxDJCwA%3D%3D)]()
+
+### 3. Edit the Form Container
+* after your **FormContainer** is placed click on the **Edit component form Item** Custom Experience button
+
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor3.png?token=AB5j8GA2EzWr0PknPwwPg0jQ9VEPwAf0ks5YxDJKwA%3D%3D)]()
+
+### 4. Set the mail information
+* on each for you are able to set different mail informations
+* **Subject** of the mail 
+* **To** the mail adress which receive the form data if the form is submitted
+
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor4.png?token=AB5j8Nzz8xzUOT8ALrvgeNalC8pZJ_sRks5YxDJSwA%3D%3D)]()
+
+### 5. Add the componentes of which you need for your form you can choose between different form components
+* Checkbox
+* Date
+* Textarea
+* Text
+* Submit Button
+
+> add this components by simply drag & drop the into the **FormContainer**
+
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor5.png?token=AB5j8Gk-hkJ859s5rWvSKZAGse_IO1A5ks5YxDJbwA%3D%3D)]()
+
+### 6. Mandatory Fields
+* The Fields are support mandatory validation with mandatory Message
+* This option is aviable via Rendering Paramters
+* Click on one of your Input Components and select **Edit component properties**
+* By enable the checkbox **Mandatory** the mandatory validation is enabled
+* The **Mandatory Error Message** is predefined, you can change it if you want
+
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor6.png?token=AB5j8FYNrE6NKiM6xV_bS0lnMnTs-y1cks5YxDJkwA%3D%3D)]()
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor7.png?token=AB5j8N_0nMWnHTCobKkUHyFALKvhvw6fks5YxDOywA%3D%3D)]()
+
+
+### 7. Styling
+* All Form Components are Style enabled
+* This option is aviable via Rendering Paramters
+* Click on one of your Input Components and select **Edit component properties**
+* Scroll down to the Styling Section
+* Choose one of the Stylings for example **Position Center** and click ok
+
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor6.png?token=AB5j8FYNrE6NKiM6xV_bS0lnMnTs-y1cks5YxDJkwA%3D%3D)]()
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor8.png?token=AB5j8AGwxlGuq1wOUyg3dVNvjBImp5vpks5YxDROwA%3D%3D)]()
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor9.png?token=AB5j8JeqowFmXtXiaSYWnwN6Db00fUeCks5YxDRVwA%3D%3D)]()
 
 ## Extensibility
 
