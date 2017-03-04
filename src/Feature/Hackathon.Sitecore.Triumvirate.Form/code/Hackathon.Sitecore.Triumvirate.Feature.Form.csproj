@@ -125,6 +125,24 @@
       <HintPath>..\..\..\..\packages\Sitecore.NVelocity.8.2.161115\lib\NET452\Sitecore.NVelocity.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Sitecore.XA.Foundation.IoC">
+      <HintPath>..\..\..\..\dependencies\Sitecore.XA.Foundation.IoC.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.XA.Foundation.MarkupDecorator">
+      <HintPath>..\..\..\..\dependencies\Sitecore.XA.Foundation.MarkupDecorator.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.XA.Foundation.Mvc">
+      <HintPath>..\..\..\..\dependencies\Sitecore.XA.Foundation.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.XA.Foundation.RenderingVariants">
+      <HintPath>..\..\..\..\dependencies\Sitecore.XA.Foundation.RenderingVariants.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.XA.Foundation.SitecoreExtensions">
+      <HintPath>..\..\..\..\dependencies\Sitecore.XA.Foundation.SitecoreExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.XA.Foundation.Theming">
+      <HintPath>..\..\..\..\dependencies\Sitecore.XA.Foundation.Theming.dll</HintPath>
+    </Reference>
     <Reference Include="Sitecore.Zip, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Sitecore.Zip.8.2.161115\lib\NET452\Sitecore.Zip.dll</HintPath>
       <Private>True</Private>
@@ -182,10 +200,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Views\FormContainer\Index.cshtml" />
+    <Content Include="Views\TextInput\Index.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\RazorGeneratorMvcStart.cs" />
     <Compile Include="Controllers\Container\FormContainerController.cs" />
     <Compile Include="Controllers\Fields\Base\FieldBaseController.cs" />
     <Compile Include="Controllers\Fields\TextInputController.cs" />
@@ -210,8 +229,6 @@
     <Folder Include="Pipelines\" />
     <Folder Include="Repositories\" />
     <Folder Include="Views\FieldBase\" />
-    <Folder Include="Views\FormContainer\" />
-    <Folder Include="Views\TextInput\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
