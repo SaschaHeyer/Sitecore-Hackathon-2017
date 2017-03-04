@@ -206,6 +206,7 @@
     <Content Include="Views\Submit\Index.cshtml" />
     <Content Include="Views\CheckboxInput\Index.cshtml" />
     <Content Include="Views\TextareaInput\Index.cshtml" />
+    <Content Include="Views\DateInputField\Index.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -237,7 +238,6 @@
     <Folder Include="Models\" />
     <Folder Include="Pipelines\" />
     <Folder Include="Repositories\" />
-    <Folder Include="Views\DateInputField\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Foundation\Hackathon.Sitecore.Triumvirate.Mail\code\Hackathon.Sitecore.Triumvirate.Foundation.Mail.csproj">
