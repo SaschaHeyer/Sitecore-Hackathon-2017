@@ -1,0 +1,61 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{D33C76C5-6D0E-42BE-90CD-C3015F9945AA}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		nuget.config = nuget.config
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature", "Feature", "{348F6176-F44F-4843-B9BE-7A7335BD24E7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{14D99F28-8450-4015-919E-BA7C124DF72B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{CC14F6E1-3C40-4DE3-99F6-2C1327A03AB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackathon.Sitecore.Triumvirate.Website", "src\Project\Hackathon.Sitecore.Triumvirate\code\Hackathon.Sitecore.Triumvirate.Website.csproj", "{2CD2A569-6729-4BFF-8B0D-8A3D32803096}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hackathon.Sitecore.Triumvirate", "Hackathon.Sitecore.Triumvirate", "{954DED65-8505-466C-932E-8908E985C588}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hackathon.Sitecore.Triumvirate.Form", "Hackathon.Sitecore.Triumvirate.Form", "{9D62ED37-E60B-46C1-996B-0DAEB739FCCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackathon.Sitecore.Triumvirate.Form", "src\Feature\Hackathon.Sitecore.Triumvirate.Form\code\Hackathon.Sitecore.Triumvirate.Form.csproj", "{966DD996-5411-4877-B56A-E98A70DA618D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CD2A569-6729-4BFF-8B0D-8A3D32803096}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CD2A569-6729-4BFF-8B0D-8A3D32803096}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CD2A569-6729-4BFF-8B0D-8A3D32803096}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2CD2A569-6729-4BFF-8B0D-8A3D32803096}.Debug|x64.Build.0 = Debug|Any CPU
+		{2CD2A569-6729-4BFF-8B0D-8A3D32803096}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CD2A569-6729-4BFF-8B0D-8A3D32803096}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CD2A569-6729-4BFF-8B0D-8A3D32803096}.Release|x64.ActiveCfg = Release|Any CPU
+		{2CD2A569-6729-4BFF-8B0D-8A3D32803096}.Release|x64.Build.0 = Release|Any CPU
+		{966DD996-5411-4877-B56A-E98A70DA618D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{966DD996-5411-4877-B56A-E98A70DA618D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{966DD996-5411-4877-B56A-E98A70DA618D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{966DD996-5411-4877-B56A-E98A70DA618D}.Debug|x64.Build.0 = Debug|Any CPU
+		{966DD996-5411-4877-B56A-E98A70DA618D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{966DD996-5411-4877-B56A-E98A70DA618D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{966DD996-5411-4877-B56A-E98A70DA618D}.Release|x64.ActiveCfg = Release|Any CPU
+		{966DD996-5411-4877-B56A-E98A70DA618D}.Release|x64.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2CD2A569-6729-4BFF-8B0D-8A3D32803096} = {954DED65-8505-466C-932E-8908E985C588}
+		{954DED65-8505-466C-932E-8908E985C588} = {CC14F6E1-3C40-4DE3-99F6-2C1327A03AB1}
+		{9D62ED37-E60B-46C1-996B-0DAEB739FCCC} = {348F6176-F44F-4843-B9BE-7A7335BD24E7}
+		{966DD996-5411-4877-B56A-E98A70DA618D} = {9D62ED37-E60B-46C1-996B-0DAEB739FCCC}
+	EndGlobalSection
+EndGlobal

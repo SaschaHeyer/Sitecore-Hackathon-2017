@@ -1,1 +1,1 @@
-# Sitecore-Hackathon-2017
+# Hackathon.Sitecore.Triumvirate
