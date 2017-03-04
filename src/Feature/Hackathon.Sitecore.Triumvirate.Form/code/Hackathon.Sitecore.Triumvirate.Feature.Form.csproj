@@ -212,6 +212,7 @@
     <Compile Include="Controllers\Fields\SubmitController.cs" />
     <Compile Include="Controllers\Fields\TextInputController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Templates.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Views\web.config" />
