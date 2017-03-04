@@ -27,7 +27,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackathon.Sitecore.Triumvir
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hackathon.Sitecore.Triumvirate.DependentDatasourceLocation", "Hackathon.Sitecore.Triumvirate.DependentDatasourceLocation", "{D80F5441-2C77-4DCA-97FE-B1F463E07BD9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "code", "src\Foundation\Hackathon.Sitecore.Triumvirate.DependentDatasourceLocation\code\code.csproj", "{166D1B66-4E52-44F6-AB4D-49B318B31638}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackathon.Sitecore.Triumvirate.Foundation.DependentDatasourceLocation", "src\Foundation\Hackathon.Sitecore.Triumvirate.DependentDatasourceLocation\code\Hackathon.Sitecore.Triumvirate.Foundation.DependentDatasourceLocation.csproj", "{166D1B66-4E52-44F6-AB4D-49B318B31638}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
