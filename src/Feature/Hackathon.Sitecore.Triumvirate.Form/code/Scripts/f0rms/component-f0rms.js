@@ -4,36 +4,50 @@ XA.component.f0rms = (function ($, document) {
     api.init = function () {
         jQuery(".datepicker").datepicker();
 
+        var validationError = false;
+
         $(".submitButton").click(function (event) {
+            // Prevent a postback
             event.preventDefault();
 
             var list = {};
             var formContainer = $(this).closest('.form');
-            formContainer.find("input").each(function () {
+            formContainer.find("input, textarea").each(function () {
+                // Label Extraction
                 var label = $(this).prev("label").text();
                 if (label === "") {
                     return;
                 }
 
+                // Value Extraction
                 var value;
-
-                if ($(this).attr("type") === "submit") {
-                    return;
-                }
                 if ($(this).attr("type") === "checkbox") {
-                    if ($(this).checked) {
-                        value = 1;
-                    }
-                    else {
-                        value = 0;
-                    }
+                    value = $(this).prop("checked");
+                }
+                else if ($(this).attr("type") === "submit") {
+                    return;
                 }
                 else {
                     value = $(this).val();
                 }
 
+                // Validation
+                if ($(this).prop('required') == 'undefined' && value === "") {
+                    validationError = true;
+                    // Set Styling
+                    $(this).addClass("errorActive");
+                    $(this).next().show();
+                }
+
+                // Set up of json string
                 list[label] = value;
             });
+
+            // Return and dont execute if a error happended
+            if (validationError) {
+                return;
+            }
+
             var parameter = JSON.stringify(list);
             var id = $("#Id").val();
             var contextSiteId = $("#ContextSite").val();

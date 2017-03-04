@@ -207,6 +207,8 @@
     <Content Include="Views\CheckboxInput\Index.cshtml" />
     <Content Include="Views\TextareaInput\Index.cshtml" />
     <Content Include="Views\DateInputField\Index.cshtml" />
+    <Content Include="Views\FieldBase\Label.cshtml" />
+    <Content Include="Views\FieldBase\Error.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
