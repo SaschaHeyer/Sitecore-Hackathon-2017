@@ -1,4 +1,9 @@
-﻿# Drag-and-drop Form Editor | Build with ❤
+﻿# Sitecore Experience Accelerator Drag-and-drop Form Editor | Build with ❤
+
+## Prerequesites
+* Sitecore 8.2 rev. 161221 (Update-2)
+* Sitecore Experience Accelerator for 8.2
+* >(*Sitecore Experience Platform 8.2 Update 1 Works as well* ) 
 
 ## Features
 
