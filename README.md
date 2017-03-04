@@ -6,6 +6,16 @@
 * Mail (Foundation Project)
 * Forms (Feature Project)
 
+### Components
+
+#### Form Container
+
+#### Checkbox Input
+
+#### Text Input
+
+#### Submit
+
 ### Benefits
 
 * Content authors can add forms anywhere on the site
@@ -13,23 +23,29 @@
 * Forms can be fully mixed with all other components for the best content author experience
 * Sitecore Experience Accelerator Scaffolding predefined
 * No special form editor required
+* Data Folder and Page Data Support
 * Forms can go through workflows
 * Form is easy styleable, no more styling pain
 
 ## Installation
 
 ### 1. Install the Sitecore package
+
 ### 2. Create a new Site with the two Main Features
 * Forms (Hackathon)
 * Mail (Hackathon)
+
 ### 3. Set the Mailserver Settings proper
 * Go to the Settings Item and create a new **Mail Configuration** above the Mail Setting
 * Set the Mail Configuration (Server, From, Username, Password, Port, SSL)
 
-### 4. Installation and Configuration Done
+### 4. Done
 
 
 ## Usage
+
+> All Components can be saved in the data folder as well as page data
+
 
 ### 1. Open the Experience Editor
 
