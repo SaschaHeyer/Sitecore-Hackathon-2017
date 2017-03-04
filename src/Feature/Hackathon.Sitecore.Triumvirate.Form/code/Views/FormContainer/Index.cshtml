@@ -1,0 +1,11 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.XA.Foundation.MarkupDecorator.Extensions
+@using Sitecore.XA.Foundation.SitecoreExtensions.Extensions
+
+@model Sitecore.XA.Foundation.Mvc.Models.RenderingModelBase
+
+<div @Html.Sxa().Component("form-container", Model.Attributes)>
+    <div class="component-content">
+        @Html.Sitecore().Placeholder("form-container")
+    </div>
+</div>

@@ -1,14 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using Hackathon.Sitecore.Triumvirate.Feature.Form.Controllers.Fields.Base;
 
 namespace Hackathon.Sitecore.Triumvirate.Feature.Form.Controllers.Fields
 {
-    public class TextInputController : Controller
+    /// <summary>
+    /// Text Input Controller
+    /// </summary>
+    /// <author>
+    /// Christian Hahn, Mrz-2017
+    /// </author>
+    public class TextInputController : FieldBaseController
     {
-        // GET: TextInput
+        /// <summary>
+        /// Index Method
+        /// </summary>
+        /// <returns>Index View</returns>
         public ActionResult Index()
         {
             return View();
