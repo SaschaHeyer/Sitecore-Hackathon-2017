@@ -1,5 +1,8 @@
 ﻿# Sitecore Experience Accelerator Drag-and-drop Form Editor | Build with ❤
 
+* **Module Purpose:** Build a better user experience for editors building forms with Sitecore and Sitecore Experience Accelerator
+* **Module Sitecore Hackathon Category:** Sitecore Experience Accelerator
+
 ## Prerequesites
 * Sitecore 8.2 rev. 161221 (Update-2)
 * Sitecore Experience Accelerator for 8.2
@@ -23,6 +26,8 @@ Your are able to set the email-subject and email-receiver via experience button 
 #### Text Input [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/paint.png?token=AB5j8APN7UApqgMG8iLaSpU4GHl6RFQXks5Yw_66wA%3D%3D)]()
 
 #### Textarea Input [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/Pencil.png?token=AB5j8IJo2ENtSd1qlWE3KVZ7udK6r_a2ks5Yw_7swA%3D%3D)]()
+
+#### Date Input
 
 #### Submit [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/Memorycard.png?token=AB5j8AtAEhVy_o2gzgn1DLPQcKzUfvDWks5Yw_79wA%3D%3D)]()
 
