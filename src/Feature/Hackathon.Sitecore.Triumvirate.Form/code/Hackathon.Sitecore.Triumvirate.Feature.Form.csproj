@@ -200,8 +200,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\FormContainer\Index.cshtml" />
     <Content Include="Views\TextInput\Index.cshtml" />
+    <Content Include="Views\FormContainer\Index.cshtml" />
+    <Content Include="App_Config\Include\Feature\Hackathon.Sitecore.Triumvirate.Feature.Form.config" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

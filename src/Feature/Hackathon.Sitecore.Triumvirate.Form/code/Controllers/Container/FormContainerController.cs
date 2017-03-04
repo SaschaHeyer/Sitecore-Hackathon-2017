@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using Sitecore.XA.Foundation.Mvc.Controllers;
 
 namespace Hackathon.Sitecore.Triumvirate.Feature.Form.Controllers.Container
 {
-    public class FormContainerController : Controller
+    public class FormContainerController : StandardController
     {
         // GET: FormContainer
-        public ActionResult Index()
+        public override ActionResult Index()
         {
             return View();
         }

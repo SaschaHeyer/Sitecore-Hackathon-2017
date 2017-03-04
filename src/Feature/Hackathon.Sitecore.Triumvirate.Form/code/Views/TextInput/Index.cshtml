@@ -1,0 +1,11 @@
+﻿@using Sitecore.XA.Foundation.MarkupDecorator.Extensions
+@using Sitecore.XA.Foundation.SitecoreExtensions.Extensions
+
+@model Sitecore.XA.Foundation.Mvc.Models.RenderingModelBase
+
+<div @Html.Sxa().Component("text-input")>
+    <div class="component-content">
+        <label for="Test">Test</label>
+        <input id="Test" type="text"/>
+    </div>
+</div>
