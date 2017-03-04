@@ -95,14 +95,23 @@
     <Compile Include="Paramaters\Base\IMailParameter.cs" />
     <Compile Include="Paramaters\IFormParameter.cs" />
     <Compile Include="Paramaters\IMailParameter.cs" />
+    <Compile Include="Paramaters\Imp\Base\MailParameter.cs" />
+    <Compile Include="Paramaters\Imp\FormParameter.cs" />
+    <Compile Include="Paramaters\Imp\MailParameter.cs" />
+    <Compile Include="Paramaters\Imp\Sub\FormElementParameter.cs" />
+    <Compile Include="Paramaters\Imp\Sub\MailInformationParameter.cs" />
+    <Compile Include="Paramaters\Imp\Sub\MailSettingsParameter.cs" />
     <Compile Include="Paramaters\Sub\IFormElementParameter.cs" />
     <Compile Include="Paramaters\Sub\IMailInformationParameter.cs" />
     <Compile Include="Paramaters\Sub\IMailSettingsParameter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Results\Imp\Result.cs" />
     <Compile Include="Results\IResult.cs" />
     <Compile Include="Services\Base\IService.cs" />
     <Compile Include="Services\IMailSendService.cs" />
     <Compile Include="Services\IFormSendService.cs" />
+    <Compile Include="Services\Imp\FormSendService.cs" />
+    <Compile Include="Services\Imp\MailSendService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -113,9 +122,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Services\Imp\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

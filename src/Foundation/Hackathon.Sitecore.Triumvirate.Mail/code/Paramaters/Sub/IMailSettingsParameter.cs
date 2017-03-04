@@ -1,4 +1,6 @@
-﻿namespace Hackathon.Sitecore.Triumvirate.Foundation.Mail.Paramaters.Sub
+﻿using System.Net.Mail;
+
+namespace Hackathon.Sitecore.Triumvirate.Foundation.Mail.Paramaters.Sub
 {
     /// <summary>
     /// ISettingsParameter
@@ -16,8 +18,10 @@
 
         string Password { get; }
 
-        string Port { get; }
+        int Port { get; }
 
         bool EnableSsl { get; }
+
+        SmtpClient CreateSmtpClient();
     }
 }

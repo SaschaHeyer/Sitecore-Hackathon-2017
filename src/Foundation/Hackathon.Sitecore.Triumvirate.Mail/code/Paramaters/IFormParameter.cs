@@ -12,5 +12,7 @@ namespace Hackathon.Sitecore.Triumvirate.Foundation.Mail.Paramaters
     public interface IFormParameter : Base.IMailParameter
     {
         IEnumerable<IFormElementParameter> FormElements { get; }
+
+        IMailParameter ToMailParameter();
     }
 }

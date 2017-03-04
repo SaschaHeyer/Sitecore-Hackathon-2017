@@ -8,9 +8,8 @@
     /// </author>
     public interface IMailInformationParameter
     {
-        /// <summary>
-        /// Subject
-        /// </summary>
         string Subject { get; }
+
+        string Receiver { get; }
     }
 }
