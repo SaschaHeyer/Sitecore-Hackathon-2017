@@ -135,6 +135,17 @@ If you like you can add splitter and other moduls together with the form in this
 * The **Mandatory Error Message** is predefined, you can change it if you want
 
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor6.png?token=AB5j8FYNrE6NKiM6xV_bS0lnMnTs-y1cks5YxDJkwA%3D%3D)]()
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor7.png?token=AB5j8N_0nMWnHTCobKkUHyFALKvhvw6fks5YxDOywA%3D%3D)]()
+
+
+### 7. Styling
+* All Form Components are Style enabled
+* This option is aviable via Rendering Paramters
+* Click on one of your Input Components and select **Edit component properties**
+* Scroll down to the Styling Section
+* Choose one of the Stylings for example **Position Center** and click ok
+
+
 
 ## Extensibility
 
