@@ -1,11 +1,17 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Web.Mvc;
 using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Paramaters.Imp;
 using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Paramaters.Imp.Sub;
 using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Paramaters.Sub;
+using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Results;
 using Sitecore.XA.Foundation.Mvc.Controllers;
 using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Services;
+using Newtonsoft.Json;
+using Sitecore.Data;
+using Sitecore.Data.Items;
 
 namespace Hackathon.Sitecore.Triumvirate.Feature.Form.Controllers.Container
 {
@@ -43,11 +49,14 @@ namespace Hackathon.Sitecore.Triumvirate.Feature.Form.Controllers.Container
         /// Submit Action to handle the form submit
         /// </summary>
         /// <param name="parameter">parameters as json</param>
+        /// <param name="id">id of the datasource item</param>
+        /// <param name="contextSiteId">id of the context site</param>
         [HttpPost]
-        public void Submit(string parameter)
+        public void Submit(string parameter, string id, string contextSiteId)
         {
-            string subject = this.Rendering.DataSourceItem[Templates.Form.Fields.Subject];
-            string to = this.Rendering.DataSourceItem[Templates.Form.Fields.To];
+            Item datasourceItem = this.ContentRepository.GetItem(new ID(id));
+            string subject = datasourceItem[Templates.Form.Fields.Subject];
+            string to = datasourceItem[Templates.Form.Fields.To];
 
             IMailInformationParameter mailInformation = new MailInformationParameter()
             {
@@ -55,13 +64,30 @@ namespace Hackathon.Sitecore.Triumvirate.Feature.Form.Controllers.Container
                 Receiver = to
             };
 
-            IEnumerable<IFormElementParameter> formElements = new List<IFormElementParameter>();
+            IEnumerable<IFormElementParameter> formElements = MapInputToParameter(parameter);
 
-            this.FormSendService.Execute(new FormParameter()
+            IResult result = this.FormSendService.Execute(new FormParameter()
             {
                 FormElements = formElements,
                 MailInformation = mailInformation
             });
+
+            bool isSuccessful = result.Successful;
+        }
+
+        /// <summary>
+        /// Maps the input string in json format into the mail input format
+        /// </summary>
+        /// <param name="input">json string</param>
+        /// <returns>Result Mail format</returns>
+        private static IEnumerable<IFormElementParameter> MapInputToParameter(string input)
+        {
+            Dictionary<string,string> mappedResults = JsonConvert.DeserializeObject<Dictionary<string, string>>(input);
+            return mappedResults.Select(entry => new FormElementParameter()
+            {
+                Label = entry.Key,
+                Value = entry.Value
+            }).Cast<IFormElementParameter>().ToList();
         }
     }
 }

@@ -204,12 +204,17 @@
     <Content Include="Views\FormContainer\Index.cshtml" />
     <Content Include="App_Config\Include\Feature\Hackathon.Sitecore.Triumvirate.Feature.Form.config" />
     <Content Include="Views\Submit\Index.cshtml" />
+    <Content Include="Views\CheckboxInput\Index.cshtml" />
+    <Content Include="Views\TextareaInput\Index.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\Container\FormContainerController.cs" />
     <Compile Include="Controllers\Fields\Base\FieldBaseController.cs" />
+    <Compile Include="Controllers\Fields\CheckboxInputController.cs" />
+    <Compile Include="Controllers\Fields\DateInputFieldController.cs" />
     <Compile Include="Controllers\Fields\SubmitController.cs" />
+    <Compile Include="Controllers\Fields\TextareaInputController.cs" />
     <Compile Include="Controllers\Fields\TextInputController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Templates.cs" />
@@ -232,7 +237,7 @@
     <Folder Include="Models\" />
     <Folder Include="Pipelines\" />
     <Folder Include="Repositories\" />
-    <Folder Include="Views\FieldBase\" />
+    <Folder Include="Views\DateInputField\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Foundation\Hackathon.Sitecore.Triumvirate.Mail\code\Hackathon.Sitecore.Triumvirate.Foundation.Mail.csproj">

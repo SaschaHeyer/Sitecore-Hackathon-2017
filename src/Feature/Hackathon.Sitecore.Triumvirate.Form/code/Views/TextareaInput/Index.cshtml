@@ -6,6 +6,6 @@
 <div @Html.Sxa().Component("textarea-input") @Model.Attributes>
     <div class="component-content">
         <label for="@Model.Item.ID">@Html.Sxa().Field("Label", Model.Item, Model.GetRenderingWebEditingParams())</label>
-        <input id="@Model.Item.ID" type="text"/>
+        <textarea id="@Model.Item.ID"></textarea>
     </div>
-</div> 
+</div>
