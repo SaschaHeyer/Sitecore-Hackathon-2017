@@ -15,7 +15,7 @@ namespace Hackathon.Sitecore.Triumvirate.Foundation.Mail.Models
     {
         public string MailServer { get; set; }
 
-        public string From { get; set; }
+        public string Sender { get; set; }
 
         public string Username { get; set; }
 
@@ -23,6 +23,6 @@ namespace Hackathon.Sitecore.Triumvirate.Foundation.Mail.Models
 
         public int Port { get; set; }
 
-        public bool UseSSl { get; set; }
+        public bool UseSsl { get; set; }
     }
 }

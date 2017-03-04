@@ -1,4 +1,6 @@
-﻿using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Services;
+﻿using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Repositories;
+using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Repositories.Imp;
+using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Services;
 using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Services.Imp;
 using Microsoft.Extensions.DependencyInjection;
 using Sitecore.XA.Foundation.IOC.Pipelines.IOC;
@@ -21,6 +23,7 @@ namespace Hackathon.Sitecore.Triumvirate.Foundation.Mail.Pipelines
         {
             args.ServiceCollection.AddTransient<IMailSendService, MailSendService>();
             args.ServiceCollection.AddTransient<IFormSendService, FormSendService>();
+            args.ServiceCollection.AddTransient<IMailConfigurationRepository, MailConfigurationRepository>();
         }
     }
 }
