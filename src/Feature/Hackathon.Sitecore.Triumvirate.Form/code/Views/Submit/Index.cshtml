@@ -1,1 +1,18 @@
 ﻿
+@using Sitecore.XA.Foundation.MarkupDecorator.Extensions
+@using Sitecore.XA.Foundation.SitecoreExtensions.Extensions
+
+@model Sitecore.XA.Foundation.Mvc.Models.RenderingModelBase
+
+<div @Html.Sxa().Component("submit") @Model.Attributes>
+    <div class="component-content">
+        @if (Sitecore.Context.PageMode.IsExperienceEditorEditing)
+        {
+            @Html.Sxa().Field("Label", Model.Item, Model.GetRenderingWebEditingParams())
+        }
+        else
+        {
+            <input id="@Model.Item.ID" onclick="SubmitForm" type="submit" value="@Model.Item.Fields["Label"].Value" />
+        }       
+    </div>
+</div>

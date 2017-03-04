@@ -3,7 +3,7 @@
 
 @model Sitecore.XA.Foundation.Mvc.Models.RenderingModelBase
 
-<div @Html.Sxa().Component("text-input")>
+<div @Html.Sxa().Component("text-input") @Model.Attributes>
     <div class="component-content">
         <label for="@Model.Item.ID">@Html.Sxa().Field("Label", Model.Item, Model.GetRenderingWebEditingParams())</label>
         <input id="@Model.Item.ID" type="text"/>

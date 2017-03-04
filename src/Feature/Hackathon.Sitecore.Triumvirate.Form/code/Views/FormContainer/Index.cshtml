@@ -9,8 +9,10 @@
     var key = string.Format("{0}-{1}", placeholderKeyPrefix, 1);
 }
 
-<div @Html.Sxa().Component("fancy-container")>
+<div @Html.Sxa().Component("fancy-container") @Model.Attributes>
     <div class="component-content">
-        @Html.Sitecore().Placeholder(key)
+        <div class="form">
+            @Html.Sitecore().Placeholder(key)
+        </div>
     </div>
 </div>
