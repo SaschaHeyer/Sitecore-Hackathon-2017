@@ -12,8 +12,16 @@
 ## Features
 
 ### Main Features
-* Mail (Foundation Project)
-* Forms (Feature Project)
+#### Mail (Foundation Project)
+
+#### Forms (Feature Project)
+* A set of standard Form Fields
+* Mandatory
+* Mandatory Message
+* Styles for each component can set via Rendering Parameters
+* Scaffolding is predefined 
+* Data Folder and Page Data Support
+* Multiple receiver mail adresses **TODO**
 
 ### Components
 
@@ -27,7 +35,7 @@ Your are able to set the email-subject and email-receiver via experience button 
 
 #### Textarea Input [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/Pencil.png?token=AB5j8IJo2ENtSd1qlWE3KVZ7udK6r_a2ks5Yw_7swA%3D%3D)]()
 
-#### Date Input
+#### Date Input [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/Calendar.png?token=AB5j8BQQDs970KZPRKkGZicRQItaeCwZks5YxAx0wA%3D%3D)]()
 
 #### Submit [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/Memorycard.png?token=AB5j8AtAEhVy_o2gzgn1DLPQcKzUfvDWks5Yw_79wA%3D%3D)]()
 
@@ -37,31 +45,41 @@ Your are able to set the email-subject and email-receiver via experience button 
 * Content authors can add forms anywhere on the site
 * Forms provides the best experience by manage forms fully in the Experience Editor
 * Forms can be fully mixed with all other components for the best content author experience
-* Sitecore Experience Accelerator Scaffolding predefined
 * No special form editor required
-* Data Folder and Page Data Support
 * Forms can go through workflows
-* Form is easy styleable, no more styling pain
 
 ## Installation
 
 ### 1. Install the Sitecore package
 
-### 2. Create a new Site with the two Main Features
+### 2. Create a Tenant
+* Bevor you can create a Site you need to create a Tentant of your choice
+
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/createTenant.png?token=AB5j8LEsIT3pGKtjzmcmHEJoob5DrKAgks5YxCjZwA%3D%3D)]('mailConfiguration')
+
+### 3. Create a Site underneath your Tenant by enabling the required Features
 * Forms (Hackathon)
 * Mail (Hackathon)
+* *dont close the dialog yet, until you proceed the next step*
 
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/featureSelection.png?token=AB5j8MatUX41x2xW3rM7P1q_hvNTTqVSks5Yw_sVwA%3D%3D)]('featureSelection')
 
+### 4. Switch to the Theme Tab 
+* enable the *Create new theme* checkbox
+* choose a name of your choice
+* click ok and create the Page
 
-### 3. Set the Mailserver Settings proper
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/createTheme.png?token=AB5j8I_pdvtSfVTrHzwTbWenkh4sEWRMks5YxCi_wA%3D%3D)]('mailConfiguration')
+
+
+### 5. Set the Mailserver Settings proper
 * Go to the Settings Item and create a new **Mail Configuration** above the Mail Setting
 * Set the Mail Configuration (Server, From, Username, Password, Port, SSL)
 
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/mailConfiguration.png?token=AB5j8LqRwU99_E8WtQaBAHL1cWEj-rFPks5Yw_s2wA%3D%3D)]('mailConfiguration')
 
 
-### 4. Done
+### 6. Done
 
 
 ## Usage
@@ -76,6 +94,6 @@ Your are able to set the email-subject and email-receiver via experience button 
 
 ## Team
 
-[Marina Gluzberg](https://github.com/Gluzberg) | [Sascha Heyer](http://blog.saschaheyer.de) | [Christian Hahn](https://hachweb.wordpress.com)
+[Marina Gluzberg](https://www.linkedin.com/in/marina-gluzberg-a5707840/) | [Sascha Heyer](http://blog.saschaheyer.de) | [Christian Hahn](https://hachweb.wordpress.com)
 
 ## License 
