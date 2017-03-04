@@ -55,7 +55,9 @@ Your are able to set the email-subject and email-receiver via experience button 
 ### 2. Create a Tenant
 * Bevor you can create a Site you need to create a Tentant of your choice
 
-### 3. Create a Site by enabling the required Features
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/createTenant.png?token=AB5j8LEsIT3pGKtjzmcmHEJoob5DrKAgks5YxCjZwA%3D%3D)]('mailConfiguration')
+
+### 3. Create a Site underneath your Tenant by enabling the required Features
 * Forms (Hackathon)
 * Mail (Hackathon)
 * *dont close the dialog yet, until you proceed the next step*
@@ -66,6 +68,8 @@ Your are able to set the email-subject and email-receiver via experience button 
 * enable the *Create new theme* checkbox
 * choose a name of your choice
 * click ok and create the Page
+
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/createTheme.png?token=AB5j8I_pdvtSfVTrHzwTbWenkh4sEWRMks5YxCi_wA%3D%3D)]('mailConfiguration')
 
 
 ### 5. Set the Mailserver Settings proper
