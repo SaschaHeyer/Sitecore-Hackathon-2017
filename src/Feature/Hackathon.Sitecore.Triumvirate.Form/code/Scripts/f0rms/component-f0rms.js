@@ -4,17 +4,19 @@ XA.component.f0rms = (function ($, document) {
     api.init = function () {
         jQuery(".datepicker").datepicker();
 
-        var validationError = false;
-
         $(".submitButton").click(function (event) {
             // Prevent a postback
             event.preventDefault();
 
+            // Inititally set validation error to false
+            var validationError = false;
+
             var list = {};
             var formContainer = $(this).closest('.form');
+            // TODO Textarea
             formContainer.find("input, textarea").each(function () {
                 // Label Extraction
-                var label = $(this).prev("label").text();
+                var label = $(this).prev().find("label").text();
                 if (label === "") {
                     return;
                 }
@@ -32,11 +34,15 @@ XA.component.f0rms = (function ($, document) {
                 }
 
                 // Validation
-                if ($(this).prop('required') == 'undefined' && value === "") {
+                if ($(this).prop('required') === true && (value === "" || value === false)) {
                     validationError = true;
                     // Set Styling
                     $(this).addClass("errorActive");
-                    $(this).next().show();
+                    $(this).next().css("display", "block")
+                } else {
+                    // Set Styling
+                    $(this).removeClass("errorActive");
+                    $(this).next().css("display", "none")
                 }
 
                 // Set up of json string

@@ -9,7 +9,10 @@
 
 <div @Html.Sxa().Component("textarea-input")>
     <div class="component-content">
-        @Html.Partial("~/Views/FieldBase/Label.cshtml", Model)
+        <div>
+            @Html.Partial("~/Views/FieldBase/Label.cshtml", Model)
+        </div>
+        
         <textarea id="@Model.Item.ID" @(mandatory ? Html.Raw("required") : Html.Raw(string.Empty))></textarea>
         @Html.Partial("~/Views/FieldBase/Error.cshtml", Model)
     </div>

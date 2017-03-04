@@ -1,5 +1,5 @@
 ﻿@model Sitecore.XA.Foundation.Mvc.Models.RenderingModelBase
 
-<div name="@Model" class="hidden error">
-    @Model.Rendering.Parameters["MandatoryErrorMessage"]
+<div name="@Model.Item.ID" class="error" style="display: none;">
+    @Model.Rendering.Parameters["mandatoryErrorMessage"]
 </div>
