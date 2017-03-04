@@ -13,7 +13,7 @@ XA.component.f0rms = (function ($, document) {
 
             var list = {};
             var formContainer = $(this).closest('.form');
-            // TODO Textarea
+
             formContainer.find("input, textarea").each(function () {
                 // Label Extraction
                 var label = $(this).prev().find("label").text();
