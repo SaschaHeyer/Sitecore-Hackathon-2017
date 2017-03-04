@@ -49,6 +49,20 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Extensions.DependencyInjection">
+      <HintPath>..\..\..\..\dependencies\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
+      <HintPath>..\..\..\..\dependencies\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Kernel, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Sitecore.Kernel.NoReferences.8.2.161221\lib\NET452\Sitecore.Kernel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sitecore.XA.Foundation.IoC, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\dependencies\Sitecore.XA.Foundation.IoC.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -89,20 +103,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Config\Include\Foundation\Hackathon.Sitecore.Triumvirate.Mail.config" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Paramaters\Base\IMailParameter.cs" />
     <Compile Include="Paramaters\IFormParameter.cs" />
     <Compile Include="Paramaters\IMailParameter.cs" />
+    <Compile Include="Paramaters\Imp\Base\MailParameter.cs" />
+    <Compile Include="Paramaters\Imp\FormParameter.cs" />
+    <Compile Include="Paramaters\Imp\MailParameter.cs" />
+    <Compile Include="Paramaters\Imp\Sub\FormElementParameter.cs" />
+    <Compile Include="Paramaters\Imp\Sub\MailInformationParameter.cs" />
+    <Compile Include="Paramaters\Imp\Sub\MailSettingsParameter.cs" />
     <Compile Include="Paramaters\Sub\IFormElementParameter.cs" />
     <Compile Include="Paramaters\Sub\IMailInformationParameter.cs" />
     <Compile Include="Paramaters\Sub\IMailSettingsParameter.cs" />
+    <Compile Include="Pipelines\RegisterServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Results\Imp\Result.cs" />
     <Compile Include="Results\IResult.cs" />
     <Compile Include="Services\Base\IService.cs" />
     <Compile Include="Services\IMailSendService.cs" />
     <Compile Include="Services\IFormSendService.cs" />
+    <Compile Include="Services\Imp\FormSendService.cs" />
+    <Compile Include="Services\Imp\MailSendService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -113,9 +138,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Services\Imp\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
