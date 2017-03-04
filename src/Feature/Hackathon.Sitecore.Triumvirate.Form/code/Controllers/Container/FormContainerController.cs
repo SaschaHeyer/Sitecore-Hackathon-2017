@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Paramaters.Imp;
@@ -53,30 +51,35 @@ namespace Hackathon.Sitecore.Triumvirate.Feature.Form.Controllers.Container
         /// <param name="id">id of the datasource item</param>
         /// <param name="contextSite">id of the context site</param>
         [HttpPost]
-        public void Submit(string parameter, string id, string contextSite)
+        public ActionResult Submit(string parameter, string id, string contextSite)
         {
             Item datasourceItem = this.ContentRepository.GetItem(new ID(id));
             Item conetxtSiteItem = this.ContentRepository.GetItem(new ID(contextSite));
            
-            IResult result = new Result();
-
-            if (datasourceItem != null && conetxtSiteItem != null)
+            IResult result = new Result()
             {
-                using (new ContextItemSwitcher(conetxtSiteItem))
-                {
-                    result = this.FormSendService.Execute(new FormParameter()
-                    {
-                        FormElements = FormContainerController.MapInputToParameter(parameter),
-                        MailInformation = new MailInformationParameter()
-                        {
-                            Subject = datasourceItem[Templates.Form.Fields.Subject],
-                            Receiver = datasourceItem[Templates.Form.Fields.To]
-                        }
-                    });
-                }
+                Successful = false
+            };
+
+            if (datasourceItem == null || conetxtSiteItem == null)
+            {
+                return Json(result.Successful);
             }
 
-            bool isSuccessful = result.Successful; //// TODO: for future use: feedabck?
+            using (new ContextItemSwitcher(conetxtSiteItem))
+            {
+                result = this.FormSendService.Execute(new FormParameter()
+                {
+                    FormElements = FormContainerController.MapInputToParameter(parameter),
+                    MailInformation = new MailInformationParameter()
+                    {
+                        Subject = datasourceItem[Templates.Form.Fields.Subject],
+                        Receiver = datasourceItem[Templates.Form.Fields.To]
+                    }
+                });
+            }
+
+            return Json(result.Successful);
         }
 
         /// <summary>

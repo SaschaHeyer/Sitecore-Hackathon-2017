@@ -15,8 +15,11 @@
     <div class="component-content">
         <div class="form">
             @Html.Sitecore().Placeholder(key)
+            @Html.Partial("~/Views/FormContainer/Partial/Error.cshtml", Model)
+            @Html.Partial("~/Views/FormContainer/Partial/Success.cshtml", Model)
         </div>
     </div>
+   
 </div>
 
 @Html.Hidden("Id", Model.Item.ID)
