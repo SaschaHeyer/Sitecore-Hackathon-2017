@@ -230,3 +230,6 @@ If you like you can add splitter and other moduls together with the form in this
 [Marina Gluzberg](https://www.linkedin.com/in/marina-gluzberg-a5707840/) | [Sascha Heyer](http://blog.saschaheyer.de) | [Christian Hahn](https://hachweb.wordpress.com)
 
 ## License 
+MIT License
+
+Copyright (c) 2017 Sascha Heyer, Marina Gluzberg, Christian Hahn
