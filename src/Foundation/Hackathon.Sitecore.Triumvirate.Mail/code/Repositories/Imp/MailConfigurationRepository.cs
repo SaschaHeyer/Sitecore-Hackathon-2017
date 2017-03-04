@@ -22,7 +22,7 @@ namespace Hackathon.Sitecore.Triumvirate.Foundation.Mail.Repositories.Imp
     {
         protected IMultisiteContext MultisiteContext { get; private set; }
 
-        public MailConfigurationRepository(IMultisiteContext multisiteContext, IRenderingModelBase renderingModelBase)
+        public MailConfigurationRepository(IMultisiteContext multisiteContext)
         {
             this.MultisiteContext = multisiteContext;
         }

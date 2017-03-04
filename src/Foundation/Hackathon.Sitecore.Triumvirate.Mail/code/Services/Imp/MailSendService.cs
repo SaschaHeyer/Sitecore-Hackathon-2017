@@ -1,6 +1,7 @@
 ﻿using System.Net.Mail;
 using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Models;
 using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Paramaters;
+using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Paramaters.Imp;
 using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Paramaters.Imp.Sub;
 using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Paramaters.Sub;
 using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Repositories;
@@ -30,11 +31,16 @@ namespace Hackathon.Sitecore.Triumvirate.Foundation.Mail.Services.Imp
 
             try
             {
-                IMailSettingsParameter mailSettings = parameter.MailSettings ?? this.DefaultMailSettings;
-
-                if (mailSettings != null)
+                IMailParameter mailParameter = new MailParameter()
                 {
-                    mailSettings.CreateSmtpClient().Send(parameter.CreateMailMessage());
+                    MailInformation = parameter.MailInformation,
+                    MailSettings = parameter.MailSettings ?? this.DefaultMailSettings,
+                    Body = parameter.Body
+                };
+
+                if (mailParameter.MailSettings != null)
+                {
+                    mailParameter.MailSettings.CreateSmtpClient().Send(mailParameter.CreateMailMessage());
                 }
             }
             catch
