@@ -1,5 +1,6 @@
-﻿@model Sitecore.XA.Foundation.Mvc.Models.RenderingModelBase
+﻿@using Sitecore.XA.Foundation.SitecoreExtensions.Extensions
+@model Sitecore.XA.Foundation.Mvc.Models.RenderingModelBase
 
 <div name="@Model.Item.ID" class="error" style="display: none;">
-    @Model.Rendering.Parameters["mandatoryErrorMessage"]
+    @Html.Sxa().Field("successMessage", Model.Item, Model.GetRenderingWebEditingParams())
 </div>

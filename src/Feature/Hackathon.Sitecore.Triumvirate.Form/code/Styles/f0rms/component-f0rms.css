@@ -1,0 +1,12 @@
+.error{
+	color: red;
+	font-weight: bold;
+}
+
+.inline {
+	style="display: inline;
+}
+
+.fullWidth{
+	width= 100%;
+}

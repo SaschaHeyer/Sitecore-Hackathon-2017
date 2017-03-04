@@ -53,30 +53,38 @@ namespace Hackathon.Sitecore.Triumvirate.Feature.Form.Controllers.Container
         /// <param name="id">id of the datasource item</param>
         /// <param name="contextSite">id of the context site</param>
         [HttpPost]
-        public void Submit(string parameter, string id, string contextSite)
+        public ActionResult Submit(string parameter, string id, string contextSite)
         {
             Item datasourceItem = this.ContentRepository.GetItem(new ID(id));
             Item conetxtSiteItem = this.ContentRepository.GetItem(new ID(contextSite));
-           
-            IResult result = new Result();
 
-            if (datasourceItem != null && conetxtSiteItem != null)
+            IResult result = new Result()
             {
-                using (new ContextItemSwitcher(conetxtSiteItem))
+                Successful = false
+            };
+
+            if (datasourceItem == null || conetxtSiteItem == null)
+            {
+                return Json(result.Successful);
+            }
+            using (new ContextItemSwitcher(conetxtSiteItem))
+            {
+                result = this.FormSendService.Execute(new FormParameter()
                 {
-                    result = this.FormSendService.Execute(new FormParameter()
+                    FormElements = FormContainerController.MapInputToParameter(parameter),
+                    MailInformation = new MailInformationParameter()
                     {
-                        FormElements = FormContainerController.MapInputToParameter(parameter),
-                        MailInformation = new MailInformationParameter()
-                        {
-                            Subject = datasourceItem[Templates.Form.Fields.Subject],
-                            Receiver = datasourceItem[Templates.Form.Fields.To]
-                        }
-                    });
-                }
+                        Subject = datasourceItem[Templates.Form.Fields.Subject],
+                        Receiver = datasourceItem[Templates.Form.Fields.To]
+                    },
+                    FormFormatParameter = new FormFormatParameter(
+                        datasourceItem[Templates.Form.Fields.Opening],
+                        datasourceItem[Templates.Form.Fields.Closing],
+                        datasourceItem[Templates.Form.Fields.FieldFormat])
+                });
             }
 
-            bool isSuccessful = result.Successful; //// TODO: for future use: feedabck?
+            return Json(result.Successful);
         }
 
         /// <summary>
@@ -86,7 +94,7 @@ namespace Hackathon.Sitecore.Triumvirate.Feature.Form.Controllers.Container
         /// <returns>Result Mail format</returns>
         private static IEnumerable<IFormElementParameter> MapInputToParameter(string input)
         {
-            Dictionary<string,string> mappedResults = JsonConvert.DeserializeObject<Dictionary<string, string>>(input);
+            Dictionary<string, string> mappedResults = JsonConvert.DeserializeObject<Dictionary<string, string>>(input);
             return mappedResults.Select(entry => new FormElementParameter()
             {
                 Label = entry.Key,

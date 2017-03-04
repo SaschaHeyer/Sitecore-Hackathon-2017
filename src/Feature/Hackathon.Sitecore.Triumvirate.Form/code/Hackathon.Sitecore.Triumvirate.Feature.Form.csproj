@@ -209,6 +209,8 @@
     <Content Include="Views\DateInputField\Index.cshtml" />
     <Content Include="Views\FieldBase\Label.cshtml" />
     <Content Include="Views\FieldBase\Error.cshtml" />
+    <Content Include="Views\FormContainer\Partial\Success.cshtml" />
+    <Content Include="Views\FormContainer\Partial\Error.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
