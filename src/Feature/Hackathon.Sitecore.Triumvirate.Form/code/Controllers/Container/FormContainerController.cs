@@ -6,7 +6,7 @@ namespace Hackathon.Sitecore.Triumvirate.Feature.Form.Controllers.Container
     public class FormContainerController : StandardController
     {
         // GET: FormContainer
-        public ActionResult Index()
+        public override ActionResult Index()
         {
             return View();
         }

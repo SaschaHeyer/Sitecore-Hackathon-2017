@@ -15,7 +15,7 @@ namespace Hackathon.Sitecore.Triumvirate.Feature.Form.Controllers.Fields
         /// Index Method
         /// </summary>
         /// <returns>Index View</returns>
-        public ActionResult Index()
+        public override ActionResult Index()
         {
             return View();
         }

@@ -4,8 +4,13 @@
 
 @model Sitecore.XA.Foundation.Mvc.Models.RenderingModelBase
 
-<div @Html.Sxa().Component("form-container", Model.Attributes)>
+@{
+    const string placeholderKeyPrefix = "f0rm-container";
+    var key = string.Format("{0}-{1}", placeholderKeyPrefix, 1);
+}
+
+<div @Html.Sxa().Component("fancy-container")>
     <div class="component-content">
-        @Html.Sitecore().Placeholder("form-container")
+        @Html.Sitecore().Placeholder(key)
     </div>
 </div>
