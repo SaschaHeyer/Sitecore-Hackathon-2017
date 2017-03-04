@@ -68,7 +68,7 @@ XA.component.f0rms = (function ($, document) {
                 },
                 method: "POST"
             }).done(function (data) {
-                if (data == "true") {
+                if (data === true) {
                     formContainer.find(".sendsuccess").css("display", "block")
                     formContainer.find(".senderror").css("display", "none")
                 } else {

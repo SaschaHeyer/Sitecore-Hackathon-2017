@@ -3,10 +3,20 @@
 	font-weight: bold;
 }
 
+.senderror{
+	color: red;
+	font-weight: bold;
+}
+
+.sendsuccess{
+	color: green;
+	font-weight: bold;
+}
+
 .inline {
-	style="display: inline;
+	display: inline;
 }
 
 .submitButton{
-	width= 100%;
+	width: 100%;
 }
