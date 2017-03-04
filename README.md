@@ -78,6 +78,11 @@ Your are able to set the email-subject and email-receiver via experience button 
 
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/mailConfiguration.png?token=AB5j8LqRwU99_E8WtQaBAHL1cWEj-rFPks5Yw_s2wA%3D%3D)]('mailConfiguration')
 
+### Install the included required Theme
+
+> This Theme includes some javascript which is required for the form handling
+
+* 
 
 ### 6. Done
 
@@ -148,6 +153,17 @@ If you like you can add splitter and other moduls together with the form in this
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor6.png?token=AB5j8FYNrE6NKiM6xV_bS0lnMnTs-y1cks5YxDJkwA%3D%3D)]()
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor8.png?token=AB5j8AGwxlGuq1wOUyg3dVNvjBImp5vpks5YxDROwA%3D%3D)]()
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor9.png?token=AB5j8JeqowFmXtXiaSYWnwN6Db00fUeCks5YxDRVwA%3D%3D)]()
+
+### 8. Mail Format Settings
+
+> The mail format ist predefined, if you want you can change the default behavior. You have to provide all of this three informations, otherwiese a fallback is used.
+
+* Select the **FormContainer** and click on the **Edit component form Item** Custom Experience button
+* You have change the following fields (Opening, Closing, Field Format)
+
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor3.png?token=AB5j8GA2EzWr0PknPwwPg0jQ9VEPwAf0ks5YxDJKwA%3D%3D)]()
+[![]()]()
+
 
 ## Extensibility
 
