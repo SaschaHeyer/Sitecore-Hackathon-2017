@@ -23,7 +23,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hackathon.Sitecore.Triumvir
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hackathon.Sitecore.Triumvirate.Form", "Hackathon.Sitecore.Triumvirate.Form", "{9D62ED37-E60B-46C1-996B-0DAEB739FCCC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackathon.Sitecore.Triumvirate.Form", "src\Feature\Hackathon.Sitecore.Triumvirate.Form\code\Hackathon.Sitecore.Triumvirate.Form.csproj", "{966DD996-5411-4877-B56A-E98A70DA618D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackathon.Sitecore.Triumvirate.Feature.Form", "src\Feature\Hackathon.Sitecore.Triumvirate.Form\code\Hackathon.Sitecore.Triumvirate.Feature.Form.csproj", "{966DD996-5411-4877-B56A-E98A70DA618D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hackathon.Sitecore.Triumvirate.DependentDatasourceLocation", "Hackathon.Sitecore.Triumvirate.DependentDatasourceLocation", "{D80F5441-2C77-4DCA-97FE-B1F463E07BD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "code", "src\Foundation\Hackathon.Sitecore.Triumvirate.DependentDatasourceLocation\code\code.csproj", "{166D1B66-4E52-44F6-AB4D-49B318B31638}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +53,14 @@ Global
 		{966DD996-5411-4877-B56A-E98A70DA618D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{966DD996-5411-4877-B56A-E98A70DA618D}.Release|x64.ActiveCfg = Release|Any CPU
 		{966DD996-5411-4877-B56A-E98A70DA618D}.Release|x64.Build.0 = Release|Any CPU
+		{166D1B66-4E52-44F6-AB4D-49B318B31638}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{166D1B66-4E52-44F6-AB4D-49B318B31638}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{166D1B66-4E52-44F6-AB4D-49B318B31638}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{166D1B66-4E52-44F6-AB4D-49B318B31638}.Debug|x64.Build.0 = Debug|Any CPU
+		{166D1B66-4E52-44F6-AB4D-49B318B31638}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{166D1B66-4E52-44F6-AB4D-49B318B31638}.Release|Any CPU.Build.0 = Release|Any CPU
+		{166D1B66-4E52-44F6-AB4D-49B318B31638}.Release|x64.ActiveCfg = Release|Any CPU
+		{166D1B66-4E52-44F6-AB4D-49B318B31638}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,5 +70,7 @@ Global
 		{954DED65-8505-466C-932E-8908E985C588} = {CC14F6E1-3C40-4DE3-99F6-2C1327A03AB1}
 		{9D62ED37-E60B-46C1-996B-0DAEB739FCCC} = {348F6176-F44F-4843-B9BE-7A7335BD24E7}
 		{966DD996-5411-4877-B56A-E98A70DA618D} = {9D62ED37-E60B-46C1-996B-0DAEB739FCCC}
+		{D80F5441-2C77-4DCA-97FE-B1F463E07BD9} = {14D99F28-8450-4015-919E-BA7C124DF72B}
+		{166D1B66-4E52-44F6-AB4D-49B318B31638} = {D80F5441-2C77-4DCA-97FE-B1F463E07BD9}
 	EndGlobalSection
 EndGlobal
