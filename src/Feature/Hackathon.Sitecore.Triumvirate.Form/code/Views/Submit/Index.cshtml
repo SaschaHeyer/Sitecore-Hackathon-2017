@@ -1,5 +1,4 @@
-﻿
-@using Sitecore.XA.Foundation.MarkupDecorator.Extensions
+﻿@using Sitecore.XA.Foundation.MarkupDecorator.Extensions
 @using Sitecore.XA.Foundation.SitecoreExtensions.Extensions
 
 @model Sitecore.XA.Foundation.Mvc.Models.RenderingModelBase
@@ -12,7 +11,7 @@
         }
         else
         {
-            <input id="@Model.Item.ID" onclick="SubmitForm" type="submit" value="@Model.Item.Fields["Label"].Value" />
-        }       
+            <input id="@Model.Item.ID" type="submit" class="submitButton" value="@Model.Item.Fields["Label"].Value" />
+        }
     </div>
 </div>
