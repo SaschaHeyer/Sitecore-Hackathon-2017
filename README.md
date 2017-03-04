@@ -21,13 +21,14 @@
 * Styles for each component can set via Rendering Parameters
 * Scaffolding is predefined 
 * Data Folder and Page Data Support
+* Sending mails based on the Form information
 * Multiple receiver mail adresses
 
 ### Components
 
 #### Form Container [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/workbox.png?token=AB5j8LSrx3dANnS3v4Lr7t9NNoQ6TlIsks5Yw_6UwA%3D%3D)]()
 > The form container have to contain all the form related components.
-Your are able to set the email-subject and email-receiver via experience button on this component.
+Your are able to set the mail-subject and mail-receiver via experience button on this component.
 
 #### Checkbox Input [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/Right.png?token=AB5j8OAnXOkPNaB0N8YGQpCGCzHiQ3vYks5Yw_7awA%3D%3D)]()
 
@@ -166,6 +167,25 @@ If you like you can add splitter and other moduls together with the form in this
 
 
 ## Extensibility
+
+### Item Structure
+
+#### Placeholders
+* /sitecore/layout/Placeholder Settings/Feature/Experience Accelerator/Hackathon
+
+#### Renderings
+* /sitecore/layout/Renderings/Feature/Experience Accelerator/Hackathon
+
+#### Templates
+* /sitecore/templates/Feature/Experience Accelerator/Hackathon
+* /sitecore/templates/Foundation/Experience Accelerator/Mail
+
+#### Settings
+* /sitecore/system/Settings/Feature/Experience Accelerator/Hackathon
+* /sitecore/system/Settings/Foundation/Experience Accelerator/Mail
+
+#### Custom Experience Buttons (**CORE** Database)
+* /sitecore/content/Applications/WebEdit/Custom Experience Buttons/Edit Form
 
 ## Team
 
