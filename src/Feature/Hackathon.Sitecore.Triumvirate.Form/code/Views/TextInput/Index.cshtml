@@ -5,7 +5,7 @@
 
 <div @Html.Sxa().Component("text-input")>
     <div class="component-content">
-        <label for="Test">Test</label>
-        <input id="Test" type="text"/>
+        <label for="@Model.Item.ID">@Html.Sxa().Field("Label", Model.Item, Model.GetRenderingWebEditingParams())</label>
+        <input id="@Model.Item.ID" type="text"/>
     </div>
 </div>

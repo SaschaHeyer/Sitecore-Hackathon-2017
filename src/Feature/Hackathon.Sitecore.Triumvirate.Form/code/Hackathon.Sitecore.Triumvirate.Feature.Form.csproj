@@ -203,11 +203,13 @@
     <Content Include="Views\TextInput\Index.cshtml" />
     <Content Include="Views\FormContainer\Index.cshtml" />
     <Content Include="App_Config\Include\Feature\Hackathon.Sitecore.Triumvirate.Feature.Form.config" />
+    <Content Include="Views\Submit\Index.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\Container\FormContainerController.cs" />
     <Compile Include="Controllers\Fields\Base\FieldBaseController.cs" />
+    <Compile Include="Controllers\Fields\SubmitController.cs" />
     <Compile Include="Controllers\Fields\TextInputController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
