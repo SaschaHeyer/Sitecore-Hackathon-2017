@@ -63,6 +63,15 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\dependencies\Sitecore.XA.Foundation.IoC.dll</HintPath>
     </Reference>
+    <Reference Include="Sitecore.XA.Foundation.Multisite">
+      <HintPath>..\..\..\..\dependencies\Sitecore.XA.Foundation.Multisite.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.XA.Foundation.Mvc">
+      <HintPath>..\..\..\..\dependencies\Sitecore.XA.Foundation.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.XA.Foundation.SitecoreExtensions">
+      <HintPath>..\..\..\..\dependencies\Sitecore.XA.Foundation.SitecoreExtensions.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -107,6 +116,10 @@
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\MailConfigurationModel.cs" />
+    <Compile Include="Repositories\IMailConfigurationRepository.cs" />
+    <Compile Include="Repositories\Imp\MailConfigurationRepository.cs" />
+    <Compile Include="Templates.cs" />
     <Compile Include="Paramaters\Base\IMailParameter.cs" />
     <Compile Include="Paramaters\IFormParameter.cs" />
     <Compile Include="Paramaters\IMailParameter.cs" />
