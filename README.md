@@ -145,7 +145,9 @@ If you like you can add splitter and other moduls together with the form in this
 * Scroll down to the Styling Section
 * Choose one of the Stylings for example **Position Center** and click ok
 
-
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor6.png?token=AB5j8FYNrE6NKiM6xV_bS0lnMnTs-y1cks5YxDJkwA%3D%3D)]()
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor8.png?token=AB5j8AGwxlGuq1wOUyg3dVNvjBImp5vpks5YxDROwA%3D%3D)]()
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor9.png?token=AB5j8JeqowFmXtXiaSYWnwN6Db00fUeCks5YxDRVwA%3D%3D)]()
 
 ## Extensibility
 
