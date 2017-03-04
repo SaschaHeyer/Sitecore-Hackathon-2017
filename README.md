@@ -76,10 +76,12 @@ Your are able to set the mail-subject and mail-receiver via experience button on
 ### 4. IMPORTANT STEP: disable the default Form Feature
 > we need to disable the default sxa **Form** Feature
 
+* dont close the dialog yet, until you proceed the next step
+
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/disableForm.png?token=AB5j8DZ-Orz6-S5XYNkLMO040IX5EoXeks5YxGDgwA%3D%3D)]('featureSelection')
 
 ### 5. Switch to the Theme Tab 
-* **dont** check the *create enw theme checkbox*
+* **dont** check the *create new theme checkbox*
 * select the existing Hackathon Theme
 
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/theme.png?token=AB5j8M_QjhLZ6JXA69pEgAfenWRl_k7hks5YxGP7wA%3D%3D)]('mailConfiguration')
@@ -88,7 +90,9 @@ Your are able to set the mail-subject and mail-receiver via experience button on
 
 > The Theme includes important javascript for the form, this is a important step.
 
-* Open the Experience Editor
+* Add a new page unter your home root item
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/page.png?token=AB5j8FJo0PCVDjSVpfOtGf4Qsyiej8gvks5YxG86wA%3D%3D)]('mailConfiguration')
+* Open this page in the Experience Editor
 * In the Ribbon open the Tab Experience Accelerator
 * Click on the button Theme
 * selecht the Hackathon Theme and click ok
