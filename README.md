@@ -153,12 +153,12 @@ If you like you can add splitter and other moduls together with the form in this
 
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor4.png?token=AB5j8Nzz8xzUOT8ALrvgeNalC8pZJ_sRks5YxDJSwA%3D%3D)]()
 
-### 5. Add the componentes of which you need for your form you can choose between different form components
+### 5. Add the componentes which you need for your form you can choose between different form components
 * Checkbox
 * Date
 * Textarea
 * Text
-* Submit Button
+* Submit Button *(The Submit Button triggers the mail action)*
 
 > add this components by simply drag & drop the into the **FormContainer**
 
@@ -173,6 +173,10 @@ If you like you can add splitter and other moduls together with the form in this
 
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor6.png?token=AB5j8FYNrE6NKiM6xV_bS0lnMnTs-y1cks5YxDJkwA%3D%3D)]()
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor7.png?token=AB5j8N_0nMWnHTCobKkUHyFALKvhvw6fks5YxDOywA%3D%3D)]()
+
+> If you send your form, without filling the mandatory fields you receive the following message above each form component.
+
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/error%20message.png?token=AB5j8LIJuDW0xGfQuVBQgleGbvk-NVKKks5YxHQzwA%3D%3D)]()
 
 
 ### 7. Styling
@@ -195,6 +199,15 @@ If you like you can add splitter and other moduls together with the form in this
 
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor3.png?token=AB5j8GA2EzWr0PknPwwPg0jQ9VEPwAf0ks5YxDJKwA%3D%3D)]()
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor10.png?token=AB5j8LTvXcwqccnPJIceYznB2qY_bmfJks5YxDt4wA%3D%3D)]()
+
+### 9. Success and Fail Message
+* The form provides the option to edit success and error messages
+* Select the **FormContainer** and click on the **Edit component form Item** Custom Experience button
+* you can edit both message´s with a default RTE Field
+
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor3.png?token=AB5j8GA2EzWr0PknPwwPg0jQ9VEPwAf0ks5YxDJKwA%3D%3D)]()
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/success%20error.png?token=AB5j8CkElG4tBXwjCUuGEi8VLdQjv0Efks5YxHWBwA%3D%3D)]()
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/success.png?token=AB5j8M8LzYbSNZohaK1gA9hc1bA5p4pKks5YxHXGwA%3D%3D)]()
 
 
 ## Extensibility and Developer Informations
