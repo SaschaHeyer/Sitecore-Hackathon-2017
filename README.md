@@ -84,7 +84,7 @@ Your are able to set the email-subject and email-receiver via experience button 
 
 ## Usage
 
-> All Components can be saved in the data folder as well as page data
+> **Tip:** All Components can be saved in the data folder as well as page data
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/associatedContent.png?token=AB5j8IUAP56BqcNAR_0cGBbgqvZJphsSks5Yw_rOwA%3D%3D)]('associatedContent')
 
 
@@ -98,6 +98,7 @@ Your are able to set the email-subject and email-receiver via experience button 
 ### 2. Start with the first component
 * add the component **FormContainer** in a placeholder of your choice
 * choose a data source of your choice
+
 > This component builds the wrapper around our complete form and capsulate the components together. 
 If you like you can add of course splitter and other moduls togehter with the form in this container
 
