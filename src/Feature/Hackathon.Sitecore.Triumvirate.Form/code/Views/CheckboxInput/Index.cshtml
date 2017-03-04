@@ -3,9 +3,15 @@
 
 @model Sitecore.XA.Foundation.Mvc.Models.RenderingModelBase
 
-<div @Html.Sxa().Component("checkbox-input") @Model.Attributes>
+@{
+    bool mandatory = Model.Rendering.Parameters["mandatory"].Equals("1");
+}
+
+<div @Html.Sxa().Component("checkbox-input")>
     <div class="component-content">
-        <label for="@Model.Item.ID">@Html.Sxa().Field("Label", Model.Item, Model.GetRenderingWebEditingParams())</label>
-        <input id="@Model.Item.ID" type="checkbox"/>
+        @Html.Partial("~/Views/FieldBase/Label.cshtml", Model)
+        <input id="@Model.Item.ID" type="checkbox" @(mandatory ? Html.Raw("required") : Html.Raw(string.Empty))/>
+        @Html.Partial("~/Views/FieldBase/Error.cshtml", Model)
     </div>
 </div>
+
