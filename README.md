@@ -1,6 +1,6 @@
 ﻿# Sitecore Experience Accelerator Drag-and-drop Form Composer | Build with ❤
 
-* **Module Purpose:** Build a better user experience for editors building forms with Sitecore and Sitecore Experience Accelerator
+* **Module Purpose:** Build a better user experience for editors who building forms with Sitecore and Sitecore Experience Accelerator
 * **Module Sitecore Hackathon Category:** Sitecore Experience Accelerator
 
 ## Prerequesites
@@ -23,6 +23,8 @@
 * Data Folder and Page Data Support
 * Sending mails based on the Form information
 * Multiple receiver mail adresses
+* Success Message
+* Error Message
 
 ### Components
 
@@ -243,6 +245,10 @@ If you like you can add splitter and other moduls together with the form in this
 ## Team
 
 [Marina Gluzberg](https://www.linkedin.com/in/marina-gluzberg-a5707840/) | [Sascha Heyer](http://blog.saschaheyer.de) | [Christian Hahn](https://hachweb.wordpress.com)
+
+## Final Sample
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/formsample.png?token=AB5j8NbkIUpv-sLxkpBB40MjI1pg6j-Xks5YxHktwA%3D%3D)]()
+
 
 ## License 
 MIT License
