@@ -1,31 +1,29 @@
 ﻿using System.Web.Mvc;
 using Sitecore.XA.Foundation.Mvc.Controllers;
-using Sitecore.XA.Foundation.Mvc.Repositories.Base;
 
 namespace Hackathon.Sitecore.Triumvirate.Feature.Form.Controllers.Container
 {
+    /// <summary>
+    /// Form Container Controller
+    /// </summary>
+    /// <author>
+    /// Christian Hahn, Mrz-2017
+    /// </author>
     public class FormContainerController : StandardController
     {
         /// <summary>
-        /// Standard Sxa Model Repository
+        /// Index Method
         /// </summary>
-        public IModelRepository _repository;
-
-        /// <summary>
-        /// c'tor
-        /// </summary>
-        /// <param name="modelRepository">Reference to Model Repository</param>
-        protected FormContainerController(IModelRepository modelRepository)
-        {
-            _repository = modelRepository;
-        }
-
-        // GET: FormContainer
+        /// <returns>Index View</returns>
         public override ActionResult Index()
         {
             return View("Index", this.GetModel());
         }
 
+        /// <summary>
+        /// Submit Action to handle the form submit
+        /// </summary>
+        /// <param name="parameter">parameters as json</param>
         [HttpPost]
         public void Submit(string parameter)
         {
