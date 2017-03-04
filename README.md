@@ -34,12 +34,14 @@
 ### 2. Create a new Site with the two Main Features
 * Forms (Hackathon)
 * Mail (Hackathon)
+
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/featureSelection.png?token=AB5j8MatUX41x2xW3rM7P1q_hvNTTqVSks5Yw_sVwA%3D%3D)]('featureSelection')
 
 
 ### 3. Set the Mailserver Settings proper
 * Go to the Settings Item and create a new **Mail Configuration** above the Mail Setting
 * Set the Mail Configuration (Server, From, Username, Password, Port, SSL)
+
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/mailConfiguration.png?token=AB5j8LqRwU99_E8WtQaBAHL1cWEj-rFPks5Yw_s2wA%3D%3D)]('mailConfiguration')
 
 
