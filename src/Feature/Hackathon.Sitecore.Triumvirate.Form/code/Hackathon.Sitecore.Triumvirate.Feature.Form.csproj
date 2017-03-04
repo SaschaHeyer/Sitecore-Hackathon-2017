@@ -234,6 +234,12 @@
     <Folder Include="Repositories\" />
     <Folder Include="Views\FieldBase\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Foundation\Hackathon.Sitecore.Triumvirate.Mail\code\Hackathon.Sitecore.Triumvirate.Foundation.Mail.csproj">
+      <Project>{FAC86660-34F7-4A1B-AABA-67D9FC9D6D35}</Project>
+      <Name>Hackathon.Sitecore.Triumvirate.Foundation.Mail</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
