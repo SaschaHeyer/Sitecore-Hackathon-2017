@@ -58,6 +58,7 @@ Your are able to set the mail-subject and mail-receiver via experience button on
 
 ### 1. Install the Sitecore package
 * Upload the package and click next
+*(you can find the package here https://github.com/SaschaHeyer/Sitecore-Hackathon-2017/tree/master/installation)*
 * During the installation you the following message **/sitecore/content/Applications/WebEdit/Custom Experience Buttons/Edit Form**. Choose **Side-by-Side** as option, click apply.
 (*see screen*)
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/installtion1.png?token=AB5j8AcKx7e-ZtTdCCfizFFupXd1lZrsks5YxE0PwA%3D%3D)]('mailConfiguration')
