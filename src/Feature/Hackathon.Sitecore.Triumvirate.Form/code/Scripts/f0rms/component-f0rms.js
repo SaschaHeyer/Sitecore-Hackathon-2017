@@ -25,7 +25,7 @@ XA.component.f0rms = (function ($, document) {
                 }
 
                 var customValidationError = false;
-
+                
                 if ($(this).attr("custom-type") === "email") {
                     var emailValue = $(this).val();
                     customValidationError = !mailRegex.test(emailValue);
@@ -43,8 +43,10 @@ XA.component.f0rms = (function ($, document) {
                     value = $(this).val();
                 }
 
+                var requiredValidationError = $(this).prop('required') === true && (value === "" || value === false);
+
                 // Validation
-                if (($(this).prop('required') === true && (value === "" || value === false)) || customValidationError) {
+                if (requiredValidationError || customValidationError) {
                     validationError = true;
                     // Set Styling
                     $(this).addClass("errorActive");

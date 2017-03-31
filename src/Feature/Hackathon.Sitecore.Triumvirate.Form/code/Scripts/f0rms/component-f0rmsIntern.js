@@ -41,8 +41,10 @@ jQuery(document).ready(function () {
                 value = $(this).val();
             }
 
+            var requiredValidationError = $(this).prop('required') === true && (value === "" || value === false);
+
             // Validation
-            if (($(this).prop('required') === true && (value === "" || value === false)) || customValidationError) {
+            if (requiredValidationError || customValidationError) {
                 validationError = true;
                 // Set Styling
                 $(this).addClass("errorActive");
