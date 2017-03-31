@@ -2,7 +2,10 @@ XA.component.f0rms = (function ($, document) {
     var api = {};
 
     api.init = function () {
-        jQuery(".datepicker").datepicker();
+        var mailRegex =
+            /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+
+        $(".datepicker").datepicker();
 
         $(".submitButton").click(function (event) {
             // Prevent a postback
@@ -21,6 +24,13 @@ XA.component.f0rms = (function ($, document) {
                     return;
                 }
 
+                var customValidationError = false;
+
+                if ($(this).attr("custom-type") === "email") {
+                    var emailValue = $(this).val();
+                    customValidationError = !mailRegex.test(emailValue);
+                }
+
                 // Value Extraction
                 var value;
                 if ($(this).attr("type") === "checkbox") {
@@ -34,15 +44,15 @@ XA.component.f0rms = (function ($, document) {
                 }
 
                 // Validation
-                if ($(this).prop('required') === true && (value === "" || value === false)) {
+                if (($(this).prop('required') === true && (value === "" || value === false)) || customValidationError) {
                     validationError = true;
                     // Set Styling
                     $(this).addClass("errorActive");
-                    $(this).next().css("display", "block")
+                    $(this).next().css("display", "block");
                 } else {
                     // Set Styling
                     $(this).removeClass("errorActive");
-                    $(this).next().css("display", "none")
+                    $(this).next().css("display", "none");
                 }
 
                 // Set up of json string
@@ -69,11 +79,11 @@ XA.component.f0rms = (function ($, document) {
                 method: "POST"
             }).done(function (data) {
                 if (data === true) {
-                    formContainer.find(".sendsuccess").css("display", "block")
-                    formContainer.find(".senderror").css("display", "none")
+                    formContainer.find(".sendsuccess").css("display", "block");
+                    formContainer.find(".senderror").css("display", "none");
                 } else {
-                    formContainer.find(".senderror").css("display", "block")
-                    formContainer.find(".sendsuccess").css("display", "none")
+                    formContainer.find(".senderror").css("display", "block");
+                    formContainer.find(".sendsuccess").css("display", "none");
                 }
             });
         });

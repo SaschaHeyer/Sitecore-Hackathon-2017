@@ -200,6 +200,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Scripts\f0rms\component-f0rmsIntern.js" />
+    <Content Include="Scripts\f0rms\component-f0rms.js" />
+    <Content Include="Styles\f0rms\component-f0rms.css" />
     <Content Include="Views\TextInput\Index.cshtml" />
     <Content Include="Views\FormContainer\Index.cshtml" />
     <Content Include="App_Config\Include\Feature\Hackathon.Sitecore.Triumvirate.Feature.Form.config" />
@@ -211,6 +214,8 @@
     <Content Include="Views\FieldBase\Error.cshtml" />
     <Content Include="Views\FormContainer\Partial\Success.cshtml" />
     <Content Include="Views\FormContainer\Partial\Error.cshtml" />
+    <Content Include="Views\PasswordInputField\Index.cshtml" />
+    <Content Include="Views\EmailInputField\Index.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -218,6 +223,8 @@
     <Compile Include="Controllers\Fields\Base\FieldBaseController.cs" />
     <Compile Include="Controllers\Fields\CheckboxInputController.cs" />
     <Compile Include="Controllers\Fields\DateInputFieldController.cs" />
+    <Compile Include="Controllers\Fields\EmailInputFieldController.cs" />
+    <Compile Include="Controllers\Fields\PasswordInputFieldController.cs" />
     <Compile Include="Controllers\Fields\SubmitController.cs" />
     <Compile Include="Controllers\Fields\TextareaInputController.cs" />
     <Compile Include="Controllers\Fields\TextInputController.cs" />
