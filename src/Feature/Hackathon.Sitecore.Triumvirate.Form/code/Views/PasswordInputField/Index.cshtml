@@ -1,0 +1,20 @@
+﻿@using Sitecore.XA.Foundation.MarkupDecorator.Extensions
+@using Sitecore.XA.Foundation.SitecoreExtensions.Extensions
+
+@model Sitecore.XA.Foundation.Mvc.Models.RenderingModelBase
+
+@{
+    bool mandatory = Model.Rendering.Parameters["mandatory"].Equals("1");
+}
+
+<div @Html.Sxa().Component("password-input")>
+    <div class="component-content">
+        <div>
+            @Html.Partial("~/Views/FieldBase/Label.cshtml", Model)
+        </div>
+        <input id="@Model.Item.ID" type="password" @(mandatory ? Html.Raw("required") : Html.Raw(string.Empty)) />
+        @Html.Partial("~/Views/FieldBase/Error.cshtml", Model)
+    </div>
+</div>
+
+

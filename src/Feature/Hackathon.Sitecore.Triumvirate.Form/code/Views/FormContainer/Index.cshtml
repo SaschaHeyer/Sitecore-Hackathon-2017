@@ -19,8 +19,14 @@
             @Html.Partial("~/Views/FormContainer/Partial/Success.cshtml", Model)
         </div>
     </div>
-   
+
 </div>
 
 @Html.Hidden("Id", Model.Item.ID)
 @Html.Hidden("ContextSite", ServiceLocator.Current.Resolve<IPageContext>().Current.ID)
+
+<!-- Resources of the Form Composer -->
+<!-- Styles -->
+<link rel="stylesheet" href="~/Styles/f0rms/component-f0rms.css">
+<!-- Scripts -->
+<script src="~/Scripts/f0rms/component-f0rmsIntern.js"></script>
