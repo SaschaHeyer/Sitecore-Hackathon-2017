@@ -1,0 +1,30 @@
+﻿@using Sitecore.Data.Items
+@using Sitecore.XA.Foundation.MarkupDecorator.Extensions
+@using Sitecore.XA.Foundation.SitecoreExtensions.Extensions
+
+@model Hackathon.Sitecore.Triumvirate.Feature.Form.Models.Fields.Implementation.RadioListInputModel
+
+@{
+    bool mandatory = Model.Rendering.Parameters["mandatory"].Equals("1");
+}
+
+<div @Html.Sxa().Component("radiolist-input")>
+    <div class="component-content radioList">
+        <div>
+            @Html.Partial("~/Views/FieldBase/Label.cshtml", Model)
+        </div>
+
+        @foreach (Item element in Model.Elements)
+        {
+            <div>
+                @Html.Partial(
+               "~/Views/RadioListInput/Partial/RadioListElement.cshtml",
+               element,
+               new ViewDataDictionary() { { "radioListName", Model.Item.ID } })
+            </div>
+        }
+
+        @Html.Partial("~/Views/FieldBase/Error.cshtml", Model)
+    </div>
+</div>
+

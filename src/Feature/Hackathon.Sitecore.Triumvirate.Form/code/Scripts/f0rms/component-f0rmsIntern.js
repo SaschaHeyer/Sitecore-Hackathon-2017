@@ -31,7 +31,13 @@ jQuery(document).ready(function () {
 
             // Value Extraction
             var value;
-            if ($(this).attr("type") === "checkbox") {
+            if ($(this).attr("type") === "radio") {
+                var checkedElement = $(this).parents(".radioList").find(':checked');
+                if (checkedElement.attr("id") === $(this).attr("id")) {
+                    value = $(this).val();
+                }
+            }
+            else if ($(this).attr("type") === "checkbox") {
                 value = $(this).prop("checked");
             }
             else if ($(this).attr("type") === "submit") {

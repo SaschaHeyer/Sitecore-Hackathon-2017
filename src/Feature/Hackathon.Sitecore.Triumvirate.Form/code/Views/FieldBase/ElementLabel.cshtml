@@ -1,0 +1,6 @@
+﻿@using Sitecore.XA.Foundation.SitecoreExtensions.Extensions
+@model Sitecore.Data.Items.Item
+    
+<label for="@Model.ID">
+    @Html.Sxa().Field("Label", Model, false)
+</label>

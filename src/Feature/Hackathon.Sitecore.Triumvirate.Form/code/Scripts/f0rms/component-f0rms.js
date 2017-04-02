@@ -33,6 +33,12 @@ XA.component.f0rms = (function ($, document) {
 
                 // Value Extraction
                 var value;
+                if ($(this).attr("type") === "radio") {
+                    var checkedElement = $(this).parents(".radioList").find(':checked');
+                    if (checkedElement.attr("id") === $(this).attr("id")) {
+                        value = $(this).val();
+                    }
+                }
                 if ($(this).attr("type") === "checkbox") {
                     value = $(this).prop("checked");
                 }
