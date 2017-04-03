@@ -4,7 +4,7 @@
 @model Sitecore.XA.Foundation.Mvc.Models.RenderingModelBase
 
 @{
-    bool mandatory = Model.Rendering.Parameters["mandatory"].Equals("1");
+    bool mandatory = Model.Item["mandatory"].Equals("1");
 }
 
 <div @Html.Sxa().Component("password-input")>

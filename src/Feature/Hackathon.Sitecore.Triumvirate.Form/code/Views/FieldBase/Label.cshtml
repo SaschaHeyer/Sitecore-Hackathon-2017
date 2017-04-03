@@ -2,12 +2,9 @@
 
 @model Sitecore.XA.Foundation.Mvc.Models.RenderingModelBase
 
-@{
-    bool mandatory = Model.Rendering.Parameters["mandatory"].Equals("1");
-}
-<label for="@Model.Item.ID">
+<label for="@Model.Item.ID" key="@Model.Item["Key"]">
     @Html.Sxa().Field("Label", Model.Item, Model.GetRenderingWebEditingParams())
 </label>
-<b> @(mandatory ? Html.Raw("*") : Html.Raw(string.Empty)) </b>
+<b> @(ViewData["mandatory"].Equals("true") ? Html.Raw("*") : Html.Raw(string.Empty)) </b>
 
 
