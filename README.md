@@ -164,6 +164,8 @@ If you like you can add splitter and other moduls together with the form in this
 * Date
 * Textarea
 * Text
+* Email *(Inbuild validation for email adresses)**
+* Password
 * Submit Button *(The Submit Button triggers the mail action)*
 
 > add this components by simply drag & drop the into the **FormContainer**
