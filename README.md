@@ -179,8 +179,8 @@ If you like you can add splitter and other moduls together with the form in this
 * By enable the checkbox **Mandatory** the mandatory validation is enabled
 * The **Mandatory Error Message** is predefined, you can change it if you want
 
-[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor6_1.png?token=AB5j8FYNrE6NKiM6xV_bS0lnMnTs-y1cks5YxDJkwA%3D%3D)]()
-[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor7_1.png?token=AB5j8N_0nMWnHTCobKkUHyFALKvhvw6fks5YxDOywA%3D%3D)]()
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor6_1.png)]()
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor7_1.png)]()
 
 > If you send your form, without filling the mandatory fields you receive the following message above each form component.
 
@@ -194,8 +194,8 @@ If you like you can add splitter and other moduls together with the form in this
 * Click on one of your Input Components and select **Edit Field**
 * Initially the **Key** is the name of the field, but can be changed in any other value
 
-[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor6_1.png?token=AB5j8FYNrE6NKiM6xV_bS0lnMnTs-y1cks5YxDJkwA%3D%3D)]()
-[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor6_1_1.png?token=AB5j8N_0nMWnHTCobKkUHyFALKvhvw6fks5YxDOywA%3D%3D)]()
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor6_1.png)]()
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor6_1_1.png)]()
 
 ### 7. Styling
 * All Form Components are Style enabled
