@@ -17,48 +17,64 @@ jQuery(document).ready(function () {
 
         formContainer.find("input, textarea").each(function () {
             // Label Extraction
-            var label = $(this).prev().find("label").text();
+            var currentElement = $(this);
+
+            var label = currentElement.prev().find("label").text();
             if (label === "") {
                 return;
             }
 
-            var customValidationError= false;
+            var customValidationError = false;
 
-            if ($(this).attr("custom-type") === "email") {
-                var emailValue = $(this).val();
+            if (currentElement.attr("custom-type") === "email") {
+                var emailValue = currentElement.val();
                 customValidationError = !mailRegex.test(emailValue);
             }
 
             // Value Extraction
             var value;
-            if ($(this).attr("type") === "radio") {
-                var checkedElement = $(this).parents(".radioList").find(':checked');
-                if (checkedElement.attr("id") === $(this).attr("id")) {
-                    value = $(this).val();
+
+            if (currentElement.attr("type") === "radio") {
+                // Radio List Check
+                var radioContainer = $("div[radio-container='" + $(this).attr("name") + "']");
+                var checkedElement = radioContainer.find(':checked');
+
+                if (checkedElement.val() === undefined && $(this).prop('required') === true) {
+                    customValidationError = true;
                 }
+                else if (checkedElement.attr("id") === currentElement.attr("id")) {
+                    value = currentElement.val();
+                } else {
+                    return;
+                }
+
+                currentElement = radioContainer;
             }
-            else if ($(this).attr("type") === "checkbox") {
-                value = $(this).prop("checked");
+            else if (currentElement.attr("type") === "checkbox") {
+                // Checkbox Check
+                value = currentElement.prop("checked");
             }
-            else if ($(this).attr("type") === "submit") {
+            else if (currentElement.attr("type") === "submit") {
+                // Submit Check
                 return;
             }
             else {
-                value = $(this).val();
+                // Default handling
+                value = currentElement.val();
             }
 
-            var requiredValidationError = $(this).prop('required') === true && (value === "" || value === false);
+            var requiredValidationError = currentElement.prop('required') === true && (value === "" || value === false);
 
             // Validation
             if (requiredValidationError || customValidationError) {
                 validationError = true;
                 // Set Styling
-                $(this).addClass("errorActive");
-                $(this).next().css("display", "block");
+                currentElement.addClass("errorActive");
+                currentElement.next().css("display", "block");
             } else {
                 // Set Styling
-                $(this).removeClass("errorActive");
-                $(this).next().css("display", "none");
+                currentElement.removeClass("errorActive");
+                currentElement.next().css("display", "none");
             }
 
             // Set up of json string

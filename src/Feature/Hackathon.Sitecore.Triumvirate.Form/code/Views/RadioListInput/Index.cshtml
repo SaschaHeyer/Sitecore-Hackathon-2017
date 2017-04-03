@@ -14,16 +14,18 @@
             @Html.Partial("~/Views/FieldBase/Label.cshtml", Model)
         </div>
 
-        @foreach (Item element in Model.Elements)
-        {
-            <div>
-                @Html.Partial(
+        <div radio-container="@Model.Item.ID" >
+            @foreach (Item element in Model.Elements)
+            {
+                <div>
+                    @Html.Partial(
                "~/Views/RadioListInput/Partial/RadioListElement.cshtml",
                element,
-               new ViewDataDictionary() { { "radioListName", Model.Item.ID } })
-            </div>
-        }
-
+               new ViewDataDictionary() { { "radioListName", Model.Item.ID }, {"mandatory", mandatory} })
+                </div>
+            }
+        </div>
+       
         @Html.Partial("~/Views/FieldBase/Error.cshtml", Model)
     </div>
 </div>

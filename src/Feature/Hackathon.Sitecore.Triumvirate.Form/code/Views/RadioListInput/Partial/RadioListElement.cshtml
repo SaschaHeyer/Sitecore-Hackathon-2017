@@ -8,4 +8,5 @@
     id="@Model.ID"
     type="radio"
     name="@ViewData["radioListName"]"
-    value="@Model["Value"]">
+    value="@Model["Value"]"
+    @(ViewData["mandatory"].Equals("true") ? Html.Raw("required") : Html.Raw(string.Empty))>
