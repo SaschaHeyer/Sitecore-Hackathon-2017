@@ -164,6 +164,8 @@ If you like you can add splitter and other moduls together with the form in this
 * Date
 * Textarea
 * Text
+* Email *(Inbuild validation for email adresses)**
+* Password
 * Submit Button *(The Submit Button triggers the mail action)*
 
 > add this components by simply drag & drop the into the **FormContainer**
@@ -172,18 +174,28 @@ If you like you can add splitter and other moduls together with the form in this
 
 ### 6. Mandatory Fields
 * The Fields are support mandatory validation with mandatory Message
-* This option is aviable via Rendering Paramters
-* Click on one of your Input Components and select **Edit component properties**
+* This option is aviable via Content Fields
+* Click on one of your Input Components and select **Edit Field**
 * By enable the checkbox **Mandatory** the mandatory validation is enabled
 * The **Mandatory Error Message** is predefined, you can change it if you want
 
-[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor6.png?token=AB5j8FYNrE6NKiM6xV_bS0lnMnTs-y1cks5YxDJkwA%3D%3D)]()
-[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor7.png?token=AB5j8N_0nMWnHTCobKkUHyFALKvhvw6fks5YxDOywA%3D%3D)]()
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor6_1.png?token=AB5j8FYNrE6NKiM6xV_bS0lnMnTs-y1cks5YxDJkwA%3D%3D)]()
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor7_1.png?token=AB5j8N_0nMWnHTCobKkUHyFALKvhvw6fks5YxDOywA%3D%3D)]()
 
 > If you send your form, without filling the mandatory fields you receive the following message above each form component.
 
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/error%20message.png?token=AB5j8LIJuDW0xGfQuVBQgleGbvk-NVKKks5YxHQzwA%3D%3D)]()
 
+### 7. Key
+* All submitted fields support the choice of a special key
+* The Key is later used to determine each single field [key=value]
+* Note: Duplicated key are not allowed. If you use a key twice one of the fields is not transmitted to the server
+* This option is aviable via Content Fields
+* Click on one of your Input Components and select **Edit Field**
+* Initially the **Key** is the name of the field, but can be changed in any other value
+
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor6_1.png?token=AB5j8FYNrE6NKiM6xV_bS0lnMnTs-y1cks5YxDJkwA%3D%3D)]()
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor6_1_1.png?token=AB5j8N_0nMWnHTCobKkUHyFALKvhvw6fks5YxDOywA%3D%3D)]()
 
 ### 7. Styling
 * All Form Components are Style enabled

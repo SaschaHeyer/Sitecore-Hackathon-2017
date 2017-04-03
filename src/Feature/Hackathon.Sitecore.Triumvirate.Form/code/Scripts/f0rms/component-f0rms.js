@@ -21,7 +21,7 @@ XA.component.f0rms = (function ($, document) {
                 // Label Extraction
                 var currentElement = $(this);
 
-                var label = currentElement.prev().find("label").text();
+                var label = currentElement.prev().find("label").attr("key");
                 if (label === "") {
                     return;
                 }

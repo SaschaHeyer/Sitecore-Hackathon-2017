@@ -19,7 +19,7 @@ jQuery(document).ready(function () {
             // Label Extraction
             var currentElement = $(this);
 
-            var label = currentElement.prev().find("label").text();
+            var label = currentElement.prev().find("label").attr("key");
             if (label === "") {
                 return;
             }

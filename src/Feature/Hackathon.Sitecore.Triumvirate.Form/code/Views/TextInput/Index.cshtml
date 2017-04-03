@@ -4,10 +4,10 @@
 @model Sitecore.XA.Foundation.Mvc.Models.RenderingModelBase
 
 @{
-    bool mandatory = Model.Rendering.Parameters["mandatory"].Equals("1");
+    bool mandatory = Model.Item["mandatory"].Equals("1");
 }
 
-<div @Html.Sxa().Component("textarea-input")>
+<div @Html.Sxa().Component("text-input")>
     <div class="component-content">
         <div>
             @Html.Partial("~/Views/FieldBase/Label.cshtml", Model)
