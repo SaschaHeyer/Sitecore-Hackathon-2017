@@ -51,6 +51,11 @@ namespace Hackathon.Sitecore.Triumvirate.Feature.Form.Services.Form.Implementati
                 Success = success
             };
 
+            if (responseActionItem == null)
+            {
+                return returnModel;
+            }
+
             if (responseActionItem.TemplateID.ToString() == Templates.Action.RedirectAction.Id.ToString())
             {                
                 returnModel.RedirectUrl = ((LinkField)responseActionItem.Fields[Templates.Action.RedirectAction.Fields.RedirectUrl]).GetLinkFieldUrl();
@@ -73,7 +78,9 @@ namespace Hackathon.Sitecore.Triumvirate.Feature.Form.Services.Form.Implementati
         private Item GetResponseActionItem(Item formItem, ID contextItemField)
         {
             string actionFieldValue = formItem[contextItemField];
-            return this.ContentRepository.GetItem(new ID(actionFieldValue));
+            return string.IsNullOrEmpty(actionFieldValue) 
+                ? null 
+                : this.ContentRepository.GetItem(new ID(actionFieldValue));
         }  
     }
 }
