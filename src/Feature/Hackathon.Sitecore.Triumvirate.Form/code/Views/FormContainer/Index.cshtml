@@ -8,18 +8,17 @@
 
 @{
     const string placeholderKeyPrefix = "f0rm-container";
-    var key = string.Format("{0}-{1}", placeholderKeyPrefix, 1);
+    string key = $"{placeholderKeyPrefix}-{1}";
 }
 
 <div @Html.Sxa().Component("fancy-container")>
     <div class="component-content">
         <div class="form">
             @Html.Sitecore().Placeholder(key)
-            @Html.Partial("~/Views/FormContainer/Partial/Error.cshtml", Model)
-            @Html.Partial("~/Views/FormContainer/Partial/Success.cshtml", Model)
+            @Html.Partial("~/Views/FormContainer/Partial/Error.cshtml")
+            @Html.Partial("~/Views/FormContainer/Partial/Success.cshtml")
         </div>
     </div>
-
 </div>
 
 @Html.Hidden("Id", Model.Item.ID)

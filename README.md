@@ -218,17 +218,27 @@ If you like you can add splitter and other moduls together with the form in this
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor3.png?token=AB5j8GA2EzWr0PknPwwPg0jQ9VEPwAf0ks5YxDJKwA%3D%3D)]()
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor10.png?token=AB5j8LTvXcwqccnPJIceYznB2qY_bmfJks5YxDt4wA%3D%3D)]()
 
-### 9. Success and Fail Message
+### 9. Form Responses
 
-[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/success.png?token=AB5j8M8LzYbSNZohaK1gA9hc1bA5p4pKks5YxHXGwA%3D%3D)]()
-
-
-* The form provides the option to edit success and error messages
+* The form provides the option to edit success and error actions
 * Select the **FormContainer** and click on the **Edit component form Item** Custom Experience button
-* you can edit both message´s with a default RTE Field
+* you can choose for both success and error a dedicated reference item from the "/Data/Forms/Actions Folder"
 
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor3.png?token=AB5j8GA2EzWr0PknPwwPg0jQ9VEPwAf0ks5YxDJKwA%3D%3D)]()
-[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/success%20error.png?token=AB5j8CkElG4tBXwjCUuGEi8VLdQjv0Efks5YxHWBwA%3D%3D)]()
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditorResponseActions.png)]()
+
+
+### 9.1 Add Response Actions
+
+* You can add and define your custom response actions by adding them to the predfined root under /Data/Forms/Actions Folder
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/ResponseActionFolder.png)]()
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/ResponseActionInsert.png)]()
+
+* You can choose between the following Response Types
+1. Text Response
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/TextResponseAction.png)]()
+2. Redirect Response
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/RedirectResponseAction.png)]()
 
 ## Extensibility and Developer Informations
 

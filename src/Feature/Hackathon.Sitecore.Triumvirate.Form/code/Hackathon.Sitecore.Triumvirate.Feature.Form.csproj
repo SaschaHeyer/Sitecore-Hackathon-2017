@@ -232,12 +232,17 @@
     <Compile Include="Controllers\Fields\SubmitController.cs" />
     <Compile Include="Controllers\Fields\TextareaInputController.cs" />
     <Compile Include="Controllers\Fields\TextInputController.cs" />
+    <Compile Include="Extensions\LinkFieldExtension.cs" />
     <Compile Include="Models\Fields\Implementation\RadioListInputModel.cs" />
     <Compile Include="Models\Fields\IRadioListInputModel.cs" />
+    <Compile Include="Models\Form\IFormResponseModel.cs" />
+    <Compile Include="Models\Form\Implementation\FormResponseModel.cs" />
     <Compile Include="Pipelines\RegisterServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Fields\Implementation\RadioListInputRepository.cs" />
     <Compile Include="Repositories\Fields\IRadioListInputRepository.cs" />
+    <Compile Include="Services\Form\IFormResponseService.cs" />
+    <Compile Include="Services\Form\Implementation\FormResponseService.cs" />
     <Compile Include="Templates.cs" />
   </ItemGroup>
   <ItemGroup>

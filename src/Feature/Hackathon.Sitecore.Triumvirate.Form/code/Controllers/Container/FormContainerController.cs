@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
+using Hackathon.Sitecore.Triumvirate.Feature.Form.Services.Form;
 using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Paramaters.Imp;
 using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Paramaters.Imp.Sub;
 using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Paramaters.Sub;
@@ -30,13 +31,23 @@ namespace Hackathon.Sitecore.Triumvirate.Feature.Form.Controllers.Container
         public IFormSendService FormSendService { get; set; }
 
         /// <summary>
+        /// Form response service
+        /// </summary>
+        public IFormResponseService FormResponseService { get; }
+
+        /// <summary>
         /// c'tor
         /// </summary>
         /// <param name="formSendService">Reference to form send service</param>
-        public FormContainerController(IFormSendService formSendService)
+        /// <param name="formResponseService">reference to the form response service</param>
+        public FormContainerController(
+            IFormSendService formSendService,
+            IFormResponseService formResponseService)
         {
-            FormSendService = formSendService;
+            this.FormSendService = formSendService;
+            this.FormResponseService = formResponseService;
         }
+
         /// <summary>
         /// Index Method
         /// </summary>
@@ -65,8 +76,9 @@ namespace Hackathon.Sitecore.Triumvirate.Feature.Form.Controllers.Container
 
             if (datasourceItem == null || conetxtSiteItem == null)
             {
-                return Json(result.Successful);
+                return Json(this.FormResponseService.BuildFormResponseModel(datasourceItem, result.Successful));
             }
+
             using (new ContextItemSwitcher(conetxtSiteItem))
             {
                 result = this.FormSendService.Execute(new FormParameter()
@@ -84,7 +96,7 @@ namespace Hackathon.Sitecore.Triumvirate.Feature.Form.Controllers.Container
                 });
             }
 
-            return Json(result.Successful);
+            return Json(this.FormResponseService.BuildFormResponseModel(datasourceItem, result.Successful));
         }
 
         /// <summary>

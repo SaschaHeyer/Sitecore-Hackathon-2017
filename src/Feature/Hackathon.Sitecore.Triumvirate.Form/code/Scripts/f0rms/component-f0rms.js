@@ -3,7 +3,7 @@ XA.component.f0rms = (function ($, document) {
 
     api.init = function () {
         var mailRegex =
-            /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
         $(".datepicker").datepicker();
 
@@ -102,12 +102,23 @@ XA.component.f0rms = (function ($, document) {
                 },
                 method: "POST"
             }).done(function (data) {
-                if (data === true) {
-                    formContainer.find(".sendsuccess").css("display", "block");
-                    formContainer.find(".senderror").css("display", "none");
-                } else {
-                    formContainer.find(".senderror").css("display", "block");
-                    formContainer.find(".sendsuccess").css("display", "none");
+                var text = data["OutputText"];
+                var redirectUrl = data["RedirectUrl"];
+                var success = data["Success"];
+
+                if (text !== "") {
+                    if (success === true) {
+                        formContainer.find(".sendsuccess").css("display", "block");
+                        formContainer.find(".sendsuccess").text(text);
+                        formContainer.find(".senderror").css("display", "none");
+                    } else {
+                        formContainer.find(".senderror").css("display", "block");
+                        formContainer.find(".senderror").text(text);
+                        formContainer.find(".sendsuccess").css("display", "none");
+                    }
+                }
+                else if (redirectUrl !== "") {
+                    window.location.href = redirectUrl;
                 }
             });
         });

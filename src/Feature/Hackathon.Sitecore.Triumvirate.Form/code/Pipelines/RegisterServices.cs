@@ -1,7 +1,12 @@
 ﻿using Hackathon.Sitecore.Triumvirate.Feature.Form.Models.Fields;
 using Hackathon.Sitecore.Triumvirate.Feature.Form.Models.Fields.Implementation;
+using Hackathon.Sitecore.Triumvirate.Feature.Form.Models.Form;
+using Hackathon.Sitecore.Triumvirate.Feature.Form.Models.Form.Implementation;
 using Hackathon.Sitecore.Triumvirate.Feature.Form.Repositories.Fields;
 using Hackathon.Sitecore.Triumvirate.Feature.Form.Repositories.Fields.Implementation;
+using Hackathon.Sitecore.Triumvirate.Feature.Form.Services;
+using Hackathon.Sitecore.Triumvirate.Feature.Form.Services.Form;
+using Hackathon.Sitecore.Triumvirate.Feature.Form.Services.Form.Implementation;
 using Microsoft.Extensions.DependencyInjection;
 using Sitecore.XA.Foundation.IOC.Pipelines.IOC;
 
@@ -23,6 +28,8 @@ namespace Hackathon.Sitecore.Triumvirate.Feature.Form.Pipelines
         {
             args.ServiceCollection.AddTransient<IRadioListInputRepository, RadioListInputRepository>();
             args.ServiceCollection.AddTransient<IRadioListInputModel, RadioListInputModel>();
+            args.ServiceCollection.AddTransient<IFormResponseService, FormResponseService>();
+            args.ServiceCollection.AddTransient<IFormResponseModel, FormResponseModel>();
         }
     }
 }
