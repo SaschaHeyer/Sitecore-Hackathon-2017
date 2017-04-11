@@ -1,7 +1,8 @@
 ﻿using Hackathon.Sitecore.Triumvirate.Feature.Form.Models.Form;
+using Hackathon.Sitecore.Triumvirate.Feature.Form.Services.Base;
 using Sitecore.Data.Items;
 
-namespace Hackathon.Sitecore.Triumvirate.Feature.Form.Services.Form
+namespace Hackathon.Sitecore.Triumvirate.Feature.Form.Services.Form.Response
 {
     /// <summary>
     /// Form Response Service to Return a build form response depending on the given Context
@@ -9,7 +10,7 @@ namespace Hackathon.Sitecore.Triumvirate.Feature.Form.Services.Form
     /// <author>
     /// Christian Hahn, Apr-2017
     /// </author>
-    public interface IFormResponseService
+    public interface IFormResponseService : IActionService
     {
         /// <summary>
         /// Method to build the form response model based on the given form item

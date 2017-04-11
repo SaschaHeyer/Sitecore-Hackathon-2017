@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
-using Hackathon.Sitecore.Triumvirate.Feature.Form.Services.Form;
+using Hackathon.Sitecore.Triumvirate.Feature.Form.Services.Form.Response;
+using Hackathon.Sitecore.Triumvirate.Feature.Form.Services.Form.Submit;
 using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Paramaters.Imp;
 using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Paramaters.Imp.Sub;
 using Hackathon.Sitecore.Triumvirate.Foundation.Mail.Paramaters.Sub;
@@ -28,7 +27,12 @@ namespace Hackathon.Sitecore.Triumvirate.Feature.Form.Controllers.Container
         /// <summary>
         /// Form Send Service
         /// </summary>
-        public IFormSendService FormSendService { get; set; }
+        public IFormSendService FormSendService { get; }
+
+        /// <summary>
+        /// Form Submit Service
+        /// </summary>
+        public IFormSubmitService FormSubmitService { get; }
 
         /// <summary>
         /// Form response service
@@ -40,12 +44,15 @@ namespace Hackathon.Sitecore.Triumvirate.Feature.Form.Controllers.Container
         /// </summary>
         /// <param name="formSendService">Reference to form send service</param>
         /// <param name="formResponseService">reference to the form response service</param>
+        /// <param name="formSubmitService">Reference to the form submit service</param>
         public FormContainerController(
             IFormSendService formSendService,
-            IFormResponseService formResponseService)
+            IFormResponseService formResponseService,
+            IFormSubmitService formSubmitService)
         {
             this.FormSendService = formSendService;
             this.FormResponseService = formResponseService;
+            this.FormSubmitService = formSubmitService;
         }
 
         /// <summary>
@@ -69,34 +76,13 @@ namespace Hackathon.Sitecore.Triumvirate.Feature.Form.Controllers.Container
             Item datasourceItem = this.ContentRepository.GetItem(new ID(id));
             Item conetxtSiteItem = this.ContentRepository.GetItem(new ID(contextSite));
 
-            IResult result = new Result()
+            if (datasourceItem == null || conetxtSiteItem == null || parameter == null)
             {
-                Successful = false
-            };
-
-            if (datasourceItem == null || conetxtSiteItem == null)
-            {
-                return Json(this.FormResponseService.BuildFormResponseModel(datasourceItem, result.Successful));
+                return Json(this.FormResponseService.BuildFormResponseModel(datasourceItem));
             }
 
-            using (new ContextItemSwitcher(conetxtSiteItem))
-            {
-                result = this.FormSendService.Execute(new FormParameter()
-                {
-                    FormElements = FormContainerController.MapInputToParameter(parameter),
-                    MailInformation = new MailInformationParameter()
-                    {
-                        Subject = datasourceItem[Templates.Form.Fields.Subject],
-                        Receiver = datasourceItem[Templates.Form.Fields.To]
-                    },
-                    FormFormatParameter = new FormFormatParameter(
-                        datasourceItem[Templates.Form.Fields.Opening],
-                        datasourceItem[Templates.Form.Fields.Closing],
-                        datasourceItem[Templates.Form.Fields.FieldFormat])
-                });
-            }
-
-            return Json(this.FormResponseService.BuildFormResponseModel(datasourceItem, result.Successful));
+            bool result = this.FormSubmitService.Execute(conetxtSiteItem, datasourceItem, MapInputToParameter(parameter));           
+            return Json(this.FormResponseService.BuildFormResponseModel(datasourceItem, result));
         }
 
         /// <summary>

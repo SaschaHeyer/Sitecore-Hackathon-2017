@@ -4,9 +4,10 @@ using Hackathon.Sitecore.Triumvirate.Feature.Form.Models.Form;
 using Hackathon.Sitecore.Triumvirate.Feature.Form.Models.Form.Implementation;
 using Hackathon.Sitecore.Triumvirate.Feature.Form.Repositories.Fields;
 using Hackathon.Sitecore.Triumvirate.Feature.Form.Repositories.Fields.Implementation;
-using Hackathon.Sitecore.Triumvirate.Feature.Form.Services;
-using Hackathon.Sitecore.Triumvirate.Feature.Form.Services.Form;
-using Hackathon.Sitecore.Triumvirate.Feature.Form.Services.Form.Implementation;
+using Hackathon.Sitecore.Triumvirate.Feature.Form.Services.Form.Response;
+using Hackathon.Sitecore.Triumvirate.Feature.Form.Services.Form.Response.Implementation;
+using Hackathon.Sitecore.Triumvirate.Feature.Form.Services.Form.Submit;
+using Hackathon.Sitecore.Triumvirate.Feature.Form.Services.Form.Submit.Implementation;
 using Microsoft.Extensions.DependencyInjection;
 using Sitecore.XA.Foundation.IOC.Pipelines.IOC;
 
@@ -30,6 +31,9 @@ namespace Hackathon.Sitecore.Triumvirate.Feature.Form.Pipelines
             args.ServiceCollection.AddTransient<IRadioListInputModel, RadioListInputModel>();
             args.ServiceCollection.AddTransient<IFormResponseService, FormResponseService>();
             args.ServiceCollection.AddTransient<IFormResponseModel, FormResponseModel>();
+            args.ServiceCollection.AddTransient<IFormSubmitService, FormSubmitService>();
+            args.ServiceCollection.AddTransient<IFormSubmitMailService, FormSubmitMailService>();
+            args.ServiceCollection.AddTransient<IFormSubmitDatabaseService, FormSubmitDatabaseService>();
         }
     }
 }
