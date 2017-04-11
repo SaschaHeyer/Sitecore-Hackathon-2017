@@ -76,7 +76,7 @@ namespace Hackathon.Sitecore.Triumvirate.Feature.Form.Services.Form.Submit.Imple
                     innerSuccess = this.FormSubmitMailService.Execute(contextSiteItem, submitActionItem, formElements);
                 }
 
-                if (submitActionItem.TemplateID.ToString() == Templates.Action.Submit.SubmitMailAction.Id.ToString())
+                if (submitActionItem.TemplateID.ToString() == Templates.Action.Submit.SubmitDatabaseAction.Id.ToString())
                 {
                     innerSuccess = this.FormSubmitDatabaseService.Execute(contextSiteItem, submitActionItem, formElements);
                 }
