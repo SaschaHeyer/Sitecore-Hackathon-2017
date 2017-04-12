@@ -152,14 +152,7 @@ If you like you can add splitter and other moduls together with the form in this
 
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor3.png?token=AB5j8GA2EzWr0PknPwwPg0jQ9VEPwAf0ks5YxDJKwA%3D%3D)]()
 
-### 4. Set the mail information
-* on each for you are able to set different mail informations
-* **Subject** of the mail 
-* **To** the mail adress which receive the form data if the form is submitted
-
-[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor4.png?token=AB5j8Nzz8xzUOT8ALrvgeNalC8pZJ_sRks5YxDJSwA%3D%3D)]()
-
-### 5. Add the componentes which you need for your form you can choose between different form components
+### 4. Add the componentes which you need for your form you can choose between different form components
 * Checkbox
 * Date
 * Textarea
@@ -172,7 +165,7 @@ If you like you can add splitter and other moduls together with the form in this
 
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor5.png?token=AB5j8Gk-hkJ859s5rWvSKZAGse_IO1A5ks5YxDJbwA%3D%3D)]()
 
-### 6. Mandatory Fields
+### 5. Mandatory Fields
 * The Fields are support mandatory validation with mandatory Message
 * This option is aviable via Content Fields
 * Click on one of your Input Components and select **Edit Field**
@@ -186,7 +179,7 @@ If you like you can add splitter and other moduls together with the form in this
 
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/error%20message.png?token=AB5j8LIJuDW0xGfQuVBQgleGbvk-NVKKks5YxHQzwA%3D%3D)]()
 
-### 7. Key
+### 6. Key
 * All submitted fields support the choice of a special key
 * The Key is later used to determine each single field [key=value]
 * Note: Duplicated key are not allowed. If you use a key twice one of the fields is not transmitted to the server
@@ -208,8 +201,19 @@ If you like you can add splitter and other moduls together with the form in this
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor8.png?token=AB5j8AGwxlGuq1wOUyg3dVNvjBImp5vpks5YxDROwA%3D%3D)]()
 [![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/experienceEditor9.png?token=AB5j8JeqowFmXtXiaSYWnwN6Db00fUeCks5YxDRVwA%3D%3D)]()
 
-### 8. Mail Format Settings
+### 8. Form Submit Mail Format Settings & Set the mail information
 
+* On each form you are able to set different submit actions, via multilist
+
+[![](https://raw.githubusercontent.com/SaschaHeyer/Sitecore-Hackathon-2017/master/documentation/submitActions.png)]()
+
+* In case someone presses the submit button, every chosen Submit Action will be executed
+* If one single submit Action fails the user gets a fail response
+* If every Subnmit Action succeeded, the user gets a successful response 
+* NOTE: You are able to choose every item from the dedicated Actions Folder. Currently its up to you to choose only "Submit Actions" and not other Items
+
+* **Subject** of the mail 
+* **To** the mail adress which receive the form data if the form is submitted
 > The mail format ist predefined, if you want you can change the default behavior. You have to provide all of this three informations, otherwiese a fallback is used.
 
 * Select the **FormContainer** and click on the **Edit component form Item** Custom Experience button

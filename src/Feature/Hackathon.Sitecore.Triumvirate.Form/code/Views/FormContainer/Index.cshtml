@@ -8,7 +8,7 @@
 
 @{
     const string placeholderKeyPrefix = "f0rm-container";
-    string key = $"{placeholderKeyPrefix}-{1}";
+    var key = string.Format("{0}-{1}", placeholderKeyPrefix, 1);
 }
 
 <div @Html.Sxa().Component("fancy-container")>
